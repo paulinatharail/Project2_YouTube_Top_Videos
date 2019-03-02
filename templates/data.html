@@ -1,0 +1,1614 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <!-- Boostrap Stylesheet -->
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css" media="screen">
+
+
+    <link rel="stylesheet" type="text/css" media="screen" href="../static/css/style.css">
+    <script src="../static/js/app.py"></script>
+
+    <title>Data</title>
+</head>
+<body>
+    <!-- Start of navbar -->
+    <nav class="navbar navbar-default">
+        <div class="container-fluid navbar-custom">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="row">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle Navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="col-xs-9 phone-nav">
+                    <!-- <a class="navbar-brand" href="index.html"> -->
+                    <!-- <span><img src="data:image/png;base64,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" class="img-fluid" style="width:50px;height:60px;"> Youtube Statistics
+                </span>
+                </a> -->
+                    <a class="navbar-brand" href="/" id="logo">Youtube Stats</a>
+                </div>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right navbar-right-custom">
+                    <li><a href="/challenges">Challenges</a></li>
+                    <li><a href="/dataset">Data</a></li>
+                    <li><a href="/money">Money Guide</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Visualizations <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/visualization_1">Where are the top earners?</a></li>
+                            <li><a href="/visualization_2">Who is making the most?</a></li>
+                            <li><a href="/visualization_3">Video uploads vs Views</a></li>
+                        </ul>
+                    </li>
+                    <!--<li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Our Conclusions<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="money.html">How do you make money with Youtube?</a></li>
+                        <li><a href="Who.html"> Who is making the most with Youtube?</a></li>
+                        <li><a href="Subscribers.html"> What would it take to get into the top 100 Youtube Channels and make money?</a></li>-->
+                    <!-- <li><a href="conclusion.html">Our Conclusions</a></li> -->
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div>
+    </div><!-- /.container-fluid -->
+    </nav>
+    <!-- End of navbar -->
+    <div class="container">
+        <div class="row">
+            <table class="table table-bordered table-hover table-condensed table-striped">
+                <thead>
+                    <tr>
+                        <th title="Field #1">ID</th>
+                        <th title="Field #2">Name</th>
+                        <th title="Field #3">Channel_ID</th>
+                        <th title="Field #4">Channel_Description</th>
+                        <th title="Field #5">View_Count</th>
+                        <th title="Field #7">Subscriber_Count</th>
+                        <th title="Field #8">Video_Counts</th>
+                        <th title="Field #9">Banner_Image</th>
+                        <th title="Field #10">Channel_Type</th>
+                        <th title="Field #11">Country</th>
+                        <th title="Field #12">Published_Date</th>
+                        <th title="Field #13">Daily_Average_Earning</th>
+                        <th title="Field #14">Daily_Average_Earning_High</th>
+                        <th title="Field #15">Daily_Average_Earning_Low</th>
+                        <th title="Field #16">Daily_Average_Earning_Mid</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td align="right">0</td>
+                        <td>T-Series</td>
+                        <td>UCq-Fj5jknLsUf-MWSy4_brA</td>
+                        <td>&quot;Music can change the world&quot;. T-Series is India&#39;s largest Music Label &amp; Movie Studio, believes in bringing world close together through its music. T-Series is ...</td>
+                        <td align="right">62923002389.0</td>
+
+                        <td align="right">86998125</td>
+                        <td align="right">13153</td>
+                        <td>https://yt3.ggpht.com/SdjbnX1Wfr78hO2S-4hwG6jmZJbpGnKsI-cGNvJUeBROFH3-aT9D-Sv8pYyg-k7mqYPorvomow=w1060-fcrop64=1,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no</td>
+                        <td>Music</td>
+                        <td>IN</td>
+                        <td>Mar 13th, 2006</td>
+                        <td>$23.9K - $383.1K per day</td>
+                        <td align="right">383100.0</td>
+                        <td align="right">23900.0</td>
+                        <td align="right">203500.0</td>
+                    </tr>
+                    <tr>
+                        <td align="right">1</td>
+                        <td>WWE</td>
+                        <td>UCJ5v_MCY6GNUBTO8-D3XoAg</td>
+                        <td>WWE on YouTube is your number one spot to catch WWE original shows and exclusives! Watch videos from all of your favorite WWE Superstars, backstage ...</td>
+                        <td align="right">30246226656.0</td>
+
+                        <td align="right">39954727</td>
+                        <td align="right">39820</td>
+                        <td>https://yt3.ggpht.com/IoJHw0dMVwBR4DWb6oelr-9ELAzcv8SOiyzgw2nkPCbRfJgoxtmIWDHT0uldzdL7O6OKe_HK=w1060-fcrop64=1,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no</td>
+                        <td>Sports</td>
+                        <td>US</td>
+                        <td>May 11th, 2007</td>
+                        <td>$5K - $80.7K per day</td>
+                        <td align="right">80700.0</td>
+                        <td align="right">5000.0</td>
+                        <td align="right">42850.0</td>
+                    </tr>
+                    <tr>
+                        <td align="right">2</td>
+                        <td>SET India</td>
+                        <td>UCpEhnqL0y41EpW2TvWAHD7Q</td>
+                        <td>Sony Entertainment Television is a 24 hour Hindi General Entertainment Channel that provides complete family entertainment. A dynamic channel that responds ...</td>
+                        <td align="right">29493459610.0</td>
+
+                        <td align="right">42508399</td>
+                        <td align="right">29184</td>
+                        <td>https://yt3.ggpht.com/G3QDs9kvZGZWGI8SjCLd7w69pwuUtzwCPSUnWHx67p5hLkZkq4zgbudsYMcs2HTtBJELV6fK-Q=w1060-fcrop64=1,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no</td>
+                        <td>Entertainment</td>
+                        <td>IN</td>
+                        <td>Sep 20th, 2006</td>
+                        <td>$12.2K - $194.9K per day</td>
+                        <td align="right">194900.0</td>
+                        <td align="right">12200.0</td>
+                        <td align="right">103550.0</td>
+                    </tr>
+                    <tr>
+                        <td align="right">3</td>
+                        <td>Ryan ToysReview</td>
+                        <td>UChGJGhZ9SOOHvBB0Y4DOO_w</td>
+                        <td>Ryan loves Toys. Toys Review for kids by a kid! Join Ryan to see him play with toys and review toys for kids! He loves Cars, Trains, Thomas and friends, Lego, ...</td>
+                        <td align="right">27686524413.0</td>
+
+                        <td align="right">18385123</td>
+                        <td align="right">1303</td>
+                        <td>https://yt3.ggpht.com/2zPMtu7YfcaBMFzszCQZKuH5YSQk24UGMZG_ACKQvbXyuQ7Ag4-VVx-eY1T_pZDp9_SpdlhPQA=w1060-fcrop64=1,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no</td>
+                        <td>Entertainment</td>
+                        <td>US</td>
+                        <td>Mar 17th, 2015</td>
+                        <td>$5.4K - $87.1K per day</td>
+                        <td align="right">87100.0</td>
+                        <td align="right">5400.0</td>
+                        <td align="right">46250.0</td>
+                    </tr>
+                    <tr>
+                        <td align="right">4</td>
+                        <td>netd müzik</td>
+                        <td>UCR5wZcXtOUka8jTA57flzMg</td>
+                        <td>netd müzik, anlaşmalı müzik yapım firmalarından sağladığı, Türkçe pop müzikten alternatif müziğe kadar çeşitli tarzlardaki müzik kliplerinin resmi yayın ...</td>
+                        <td align="right">27622717527.0</td>
+
+                        <td align="right">13110387</td>
+                        <td align="right">9545</td>
+                        <td>https://yt3.ggpht.com/xYFclz7MDzGdfDfuToWe4HA8tgED-d_PH9jV-Y2p1HGKmLB2plzzN0wLIhpybJ-CAiS_nkvRRMs=w1060-fcrop64=1,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no</td>
+                        <td>Music</td>
+                        <td>TR</td>
+                        <td>Jan 23rd, 2014</td>
+                        <td>$5.2K - $83.5K per day</td>
+                        <td align="right">83500.0</td>
+                        <td align="right">5200.0</td>
+                        <td align="right">44350.0</td>
+                    </tr>
+                    <tr>
+                        <td align="right">5</td>
+                        <td>Canal KondZilla</td>
+                        <td>UCffDXn7ycAzwL2LDlbyWOTw</td>
+                        <td>Canal da KONDZILLA FILMES, a maior produtora de conteúdo audiovisual de música eletrônica de periferia do Brasil. Especializado em videoclipes com ...</td>
+                        <td align="right">23258379454.0</td>
+
+                        <td align="right">47052490</td>
+                        <td align="right">978</td>
+                        <td>https://yt3.ggpht.com/qLQRIHD6PX4n-ZvtGh9x7iUDPh68NS4rEhtlyJOt-yyOkaAM3F4g8cI_BnVcFTqLTcpf_0Pn=w1060-fcrop64=1,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no</td>
+                        <td>Music</td>
+                        <td>BR</td>
+                        <td>Mar 21st, 2012</td>
+                        <td>$4.9K - $78.5K per day</td>
+                        <td align="right">78500.0</td>
+                        <td align="right">4900.0</td>
+                        <td align="right">41700.0</td>
+                    </tr>
+                    <tr>
+                        <td align="right">6</td>
+                        <td>ABS-CBN Entertainment</td>
+                        <td>UCstEtN0pgOmCf02EdXsGChw</td>
+                        <td>Watch your favorite entertainment shows from the leading television network! Subscribe to ABS-CBN Entertainment channel!</td>
+                        <td align="right">21701207455.0</td>
+
+                        <td align="right">16181116</td>
+                        <td align="right">114330</td>
+                        <td>https://yt3.ggpht.com/gQfQQCwcI2H643wqE_og1I_2WSZ0K-a-5LUqK3SasXkwW1mEowKtN4vxZgscUfATzrruurqaJA=w1060-fcrop64=1,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no</td>
+                        <td>Entertainment</td>
+                        <td>PH</td>
+                        <td>Jul 16th, 2008</td>
+                        <td>$6.6K - $105.9K per day</td>
+                        <td align="right">105900.0</td>
+                        <td align="right">6600.0</td>
+                        <td align="right">56250.0</td>
+                    </tr>
+                    <tr>
+                        <td align="right">7</td>
+                        <td>Cocomelon - Nursery Rhymes</td>
+                        <td>UCbCmjCuTUZos6Inko4u57UQ</td>
+                        <td>At Cocomelon (formerly “ABCkidTV”), our goal is to make learning a fun and enjoyable experience for kids by creating beautiful 3D animation, educational lyrics, ...</td>
+                        <td align="right">21031876537.0</td>
+
+                        <td align="right">38024114</td>
+                        <td align="right">402</td>
+                        <td>https://yt3.ggpht.com/qWXHGizWxh7CjntQ7zeoTB6iKPTYaWpezRs-6guscHcf4dEmS4yiNmS4HJLPVW-8Yy7dMJLo26Y=w1060-fcrop64=1,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no</td>
+                        <td>Education</td>
+                        <td>US</td>
+                        <td>Sep 1st, 2006</td>
+                        <td>$21.6K - $346.1K per day</td>
+                        <td align="right">346100.0</td>
+                        <td align="right">21600.0</td>
+                        <td align="right">183850.0</td>
+                    </tr>
+                    <tr>
+                        <td align="right">8</td>
+                        <td>Movieclips</td>
+                        <td>UC3gNmTGu-TTbFPpfSs5kNkg</td>
+                        <td>The Fandango MOVIECLIPS channel is the largest collection of licensed movie clips on the web. We are HUGE movie fans. We love films so much, that our ...</td>
+                        <td align="right">20944787757.0</td>
+
+                        <td align="right">23065439</td>
+                        <td align="right">31780</td>
+                        <td>https://yt3.ggpht.com/UuXIQ_fC_epka2XIjzaYJmbc8yvS5B3o5CpczHIao_ZgSECUE0n5bd65Ges-vgNoanyVpjvflA=w1060-fcrop64=1,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no</td>
+                        <td>Film</td>
+                        <td>US</td>
+                        <td>Apr 28th, 2006</td>
+                        <td>$6.1K - $98.2K per day</td>
+                        <td align="right">98200.0</td>
+                        <td align="right">6100.0</td>
+                        <td align="right">52150.0</td>
+                    </tr>
+                    <tr>
+                        <td align="right">9</td>
+                        <td>PewDiePie</td>
+                        <td>UC-lHJZR3Gqxm24_Vd_AJ5Yw</td>
+                        <td>I make videos.</td>
+                        <td align="right">20555595375.0</td>
+
+                        <td align="right">87146524</td>
+                        <td align="right">3760</td>
+                        <td>https://yt3.ggpht.com/3Ss-aMQD695qaWBSWMy1mt6aNrIs5kIlL78Ccf_YGO4OHV1txzdWGy5J5bCUu7-T5MXJT3_W=w1060-fcrop64=1,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no</td>
+                        <td>Comedy</td>
+                        <td>US</td>
+                        <td>Apr 29th, 2010</td>
+                        <td>$2.9K - $46.4K per day</td>
+                        <td align="right">46400.0</td>
+                        <td align="right">2900.0</td>
+                        <td align="right">24650.0</td>
+                    </tr>
+                    <tr>
+                        <td align="right">10</td>
+                        <td>El Reino Infantil</td>
+                        <td>UCK1i2UviaXLUNrZlAFpw_jA</td>
+                        <td>Somos el canal de canciones infantiles de YouTube N°1 del mundo, con más de 500 videos animados. Dentro de El Reino Infantil encontrarás series ...</td>
+                        <td align="right">19112663055.0</td>
+
+                        <td align="right">19689670</td>
+                        <td align="right">693</td>
+                        <td>https://yt3.ggpht.com/4hojoxcPTN48ORA152KoWh_ckKG4x4ci6MZyiITlemMS3wW0n8cu27MujXsBH4KzGB4tW107HA=w1060-fcrop64=1,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no</td>
+                        <td>Music</td>
+                        <td>AR</td>
+                        <td>Jun 2nd, 2011</td>
+                        <td>$4.7K - $75K per day</td>
+                        <td align="right">75000.0</td>
+                        <td align="right">4700.0</td>
+                        <td align="right">39850.0</td>
+                    </tr>
+                    <tr>
+                        <td align="right">11</td>
+                        <td>Get Movies</td>
+                        <td>UClZkHt2kNIgyrTTPnSQV3SA</td>
+                        <td>GetMovies - Первый семейный канал! Тут вы найдете мультфильмы на любой вкус - для малышей, для детей постарше,...</td>
+                        <td align="right">18918169220.0</td>
+
+                        <td align="right">22791869</td>
+                        <td align="right">2860</td>
+                        <td>https://yt3.ggpht.com/eda8YI0njTAj2WigJM_Ki0RjWM-MVvlvmC2cT9Ur2gwoG-fj3MH80KTvCOjKD3PZs74R6SRohQg=w1060-fcrop64=1,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no</td>
+                        <td>Entertainment</td>
+                        <td>RU</td>
+                        <td>Dec 16th, 2006</td>
+                        <td>$3K - $47.8K per day</td>
+                        <td align="right">47800.0</td>
+                        <td align="right">3000.0</td>
+                        <td align="right">25400.0</td>
+                    </tr>
+                    <tr>
+                        <td align="right">12</td>
+                        <td>Little Baby Bum - Nursery Rhymes &amp;…</td>
+                        <td>UCKAqou7V9FAWXpZd9xtOg3Q</td>
+                        <td>The best nursery rhyme videos for children on YouTube - stunning and colourful 3D animations in beautiful HD! New videos every Wednesday, plus new weekly ...</td>
+                        <td align="right">18517296127.0</td>
+
+                        <td align="right">17709646</td>
+                        <td align="right">822</td>
+                        <td>https://yt3.ggpht.com/IHwSFZLuBm_33Hk5ykRGqcspAOfd2-u6ENkYqML6mNGzeJ-3HEMbzK6o3O7DhkjaZ4UWRpdR=w1060-fcrop64=1,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no</td>
+                        <td>Education</td>
+                        <td>US</td>
+                        <td>Jun 22nd, 2011</td>
+                        <td>$1.7K - $27.3K per day</td>
+                        <td align="right">27300.0</td>
+                        <td align="right">1700.0</td>
+                        <td align="right">14500.0</td>
+                    </tr>
+                    <tr>
+                        <td align="right">13</td>
+                        <td>JustinBieberVEVO</td>
+                        <td>UCHkj014U2CQ2Nv0UZeYpE_A</td>
+                        <td>Justin Bieber on Vevo - Official Music Videos, Live Performances, Interviews and more...</td>
+                        <td align="right">18439633105.0</td>
+
+                        <td align="right">33819954</td>
+                        <td align="right">122</td>
+                        <td>https://yt3.ggpht.com/irUFgvK36Kof0V_vzyNNx6t5f8_4SxGbXd5BLgkY34ft0wcshwHLkRwzeft1Y9YwodCttTXTiZM=w1060-fcrop64=1,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no</td>
+                        <td>Music</td>
+                        <td>US</td>
+                        <td>Sep 26th, 2009</td>
+                        <td>$839 - $13.4K per day</td>
+                        <td align="right">839000.0</td>
+                        <td align="right">13400.0</td>
+                        <td align="right">426200.0</td>
+                    </tr>
+                    <tr>
+                        <td align="right">14</td>
+                        <td>Маша и Медведь</td>
+                        <td>UCRv76wLBC73jiP7LX4C3l8Q</td>
+                        <td>«Маша и Медведь» - это самый популярный российский мультсериал для всей семьи, рассказывающий о дружбе...</td>
+                        <td align="right">18390593192.0</td>
+
+                        <td align="right">19939756</td>
+                        <td align="right">600</td>
+                        <td>https://yt3.ggpht.com/HfFqIB3hdemLKog58MiL356lUfNDkPWpSvgDM2DofmuB-3J6u_VvO3uebDPXvWZRWSq54nYi=w1060-fcrop64=1,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no</td>
+                        <td>Film</td>
+                        <td>RU</td>
+                        <td>May 31st, 2011</td>
+                        <td>$3.8K - $60.4K per day</td>
+                        <td align="right">60400.0</td>
+                        <td align="right">3800.0</td>
+                        <td align="right">32100.0</td>
+                    </tr>
+                    <tr>
+                        <td align="right">15</td>
+                        <td>WorkpointOfficial</td>
+                        <td>UC3ZkCd7XtUREnjjt3cyY_gg</td>
+                        <td>Workpoint Official สถานีความบันเทิงตลอด 24 ชั่วโมง อีกหนึ่งช่องทางเพื่อแฟนรายการข...</td>
+                        <td align="right">17276768137.0</td>
+
+                        <td align="right">21592099</td>
+                        <td align="right">30239</td>
+                        <td>https://yt3.ggpht.com/EFUehMbfKUAxZAQdKH3dyXhGeConaENFiWILJnBOb1TiP8eRYRyRcVKrPQujG50LRXnuZgap=w1060-fcrop64=1,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no</td>
+                        <td>Entertainment</td>
+                        <td>TH</td>
+                        <td>Nov 5th, 2012</td>
+                        <td>$4.2K - $67.8K per day</td>
+                        <td align="right">67800.0</td>
+                        <td align="right">4200.0</td>
+                        <td align="right">36000.0</td>
+                    </tr>
+                    <tr>
+                        <td align="right">16</td>
+                        <td>Zee TV</td>
+                        <td>UCppHT7SZKKvar4Oc9J4oljQ</td>
+                        <td>Official account of India&#39;s pioneering Hindi General Entertainment Channel in India. We celebrate the hopes and ambitions of the great Indian middle class like ...</td>
+                        <td align="right">17250253809.0</td>
+
+                        <td align="right">24533520</td>
+                        <td align="right">59082</td>
+                        <td>https://yt3.ggpht.com/KcWG24kHkvPYiV39O54apKTNy33wZkKb2W8cJaxkcZpzVrSskQ5IT1zCnRG0oQZ1AygdUfNQgQ=w1060-fcrop64=1,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no</td>
+                        <td>Entertainment</td>
+                        <td>IN</td>
+                        <td>Dec 11th, 2005</td>
+                        <td>$7.3K - $116.1K per day</td>
+                        <td align="right">116100.0</td>
+                        <td align="right">7300.0</td>
+                        <td align="right">61700.0</td>
+                    </tr>
+                    <tr>
+                        <td align="right">17</td>
+                        <td>KatyPerryVEVO</td>
+                        <td>UC-8Q-hLdECwQmaWNwXitYDw</td>
+                        <td>Katy Perry on Vevo - Official Music Videos, Live Performances, Interviews and more...</td>
+                        <td align="right">17009715727.0</td>
+
+                        <td align="right">26358468</td>
+                        <td align="right">126</td>
+                        <td>https://yt3.ggpht.com/i1jfJp3dSbpd4w_Tg80AQtzAHvz6jUdG7eNaTk2PTRfboHW-3tKREPT7n5Vend3Eo4xP6gPEAg=w1060-fcrop64=1,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no</td>
+                        <td>Music</td>
+                        <td>US</td>
+                        <td>Dec 13th, 2009</td>
+                        <td>$1.4K - $22.4K per day</td>
+                        <td align="right">22400.0</td>
+                        <td align="right">1400.0</td>
+                        <td align="right">11900.0</td>
+                    </tr>
+                    <tr>
+                        <td align="right">18</td>
+                        <td>ChuChu TV Nursery Rhymes &amp; Kids…</td>
+                        <td>UCBnZ16ahKA2DZ_T5W0FPUXg</td>
+                        <td>ChuChu TV is designed to engage children through a series of upbeat nursery rhymes and educational songs with colorful animations. Our ChuChu TV ...</td>
+                        <td align="right">16695500110.0</td>
+
+                        <td align="right">22318180</td>
+                        <td align="right">290</td>
+                        <td>https://yt3.ggpht.com/xVcFsld45nPXB3cxZuNsAa9WG6hsk7fKniDqzj7SL7IvMALutP1AfufKWvA5ytk9oIl6Bco5YA=w1060-fcrop64=1,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no</td>
+                        <td>Education</td>
+                        <td>IN</td>
+                        <td>Feb 9th, 2013</td>
+                        <td>$2K - $32.7K per day</td>
+                        <td align="right">32700.000000000004</td>
+                        <td align="right">2000.0</td>
+                        <td align="right">17350.0</td>
+                    </tr>
+                    <tr>
+                        <td align="right">19</td>
+                        <td>TaylorSwiftVEVO</td>
+                        <td>UCANLZYMidaCbLQFWXBC95Jg</td>
+                        <td> </td>
+                        <td align="right">16243367871.0</td>
+
+                        <td align="right">27725637</td>
+                        <td align="right">82</td>
+                        <td>https://yt3.ggpht.com/NjEqXyd64kz1o7ayLWO6rJCTimkG6ZuxkEIbAlLQcJUi8Ezb0_5lnHvA4ZvpXhd1oxbu-QW1=w1060-fcrop64=1,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no</td>
+                        <td>Music</td>
+                        <td>US</td>
+                        <td>May 12th, 2009</td>
+                        <td>$1.1K - $17.1K per day</td>
+                        <td align="right">17100.0</td>
+                        <td align="right">1100.0</td>
+                        <td align="right">9100.0</td>
+                    </tr>
+                    <tr>
+                        <td align="right">20</td>
+                        <td>shakiraVEVO</td>
+                        <td>UCGnjeahCJW1AF34HBmQTJ-Q</td>
+                        <td>Shakira on Vevo - Official Music Videos, Live Performances, Interviews and more...</td>
+                        <td align="right">15583976492.0</td>
+
+                        <td align="right">19440950</td>
+                        <td align="right">144</td>
+                        <td>https://yt3.ggpht.com/Jje2bTmSGjFpWqhs1242f-h-0DqAuJjkIxvCvdMgM8bIwv7AIwizKV7kqF-Ej4VCKJZ2aBNlgA=w1060-fcrop64=1,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no</td>
+                        <td>Music</td>
+                        <td>US</td>
+                        <td>Sep 2nd, 2009</td>
+                        <td>$1.3K - $20.3K per day</td>
+                        <td align="right">20300.0</td>
+                        <td align="right">1300.0</td>
+                        <td align="right">10800.0</td>
+                    </tr>
+                    <tr>
+                        <td align="right">21</td>
+                        <td>Zee Music Company</td>
+                        <td>UCFFbwnve3yF62-tVXkTyHqg</td>
+                        <td>Zee Music Company is part of India&#39;s leading television media and entertainment companies. It is amongst the largest producers and aggregators of Hindi ...</td>
+                        <td align="right">15064151941.0</td>
+
+                        <td align="right">31860479</td>
+                        <td align="right">3914</td>
+                        <td>https://yt3.ggpht.com/qkGy4B5oN57n0QGGsglcjXM4eojDv_vXzIOb8YNGqDEM86T_ifN8L97XQWfQT4VFuyUX_KTp=w1060-fcrop64=1,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no</td>
+                        <td>Music</td>
+                        <td>IN</td>
+                        <td>Mar 12th, 2014</td>
+                        <td>$5.7K - $91.6K per day</td>
+                        <td align="right">91600.0</td>
+                        <td align="right">5700.0</td>
+                        <td align="right">48650.0</td>
+                    </tr>
+                    <tr>
+                        <td align="right">22</td>
+                        <td>TheEllenShow</td>
+                        <td>UCp0hYYBW6IMayGgR-WeoCvQ</td>
+                        <td>For 15 incredible, eventful and sometimes life-changing seasons, Ellen has been making audiences laugh all over the world with her signature brand of humor ...</td>
+                        <td align="right">15042263417.0</td>
+
+                        <td align="right">31062982</td>
+                        <td align="right">9930</td>
+                        <td>https://yt3.ggpht.com/_C4bdlq4hWks8G-PgURs0MUyzaZ32My-qH-PyLfe3UwLdZKfxqinL6I3q9BNhM51glThizTzqYY=w1060-fcrop64=1,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no</td>
+                        <td>Entertainment</td>
+                        <td>US</td>
+                        <td>Nov 21st, 2006</td>
+                        <td>$2.4K - $38.7K per day</td>
+                        <td align="right">38700.0</td>
+                        <td align="right">2400.0</td>
+                        <td align="right">20550.0</td>
+                    </tr>
+                    <tr>
+                        <td align="right">23</td>
+                        <td>BuzzFeedVideo</td>
+                        <td>UCpko_-a4wgz2u_DgDgd9fqA</td>
+                        <td>BuzzFeed&#39;s flagship channel. Sometimes funny, sometimes serious, always shareable. New videos posted daily! To see behind-the-scenes &amp; more, follow us on ...</td>
+                        <td align="right">14828637804.0</td>
+
+                        <td align="right">18476540</td>
+                        <td align="right">5869</td>
+                        <td>https://yt3.ggpht.com/x567BajITjYdzHNjGyeY9oZbnMwB769B4EJwtuDIE9D35gfTGU-9H-Rm1UdW6NJz_4vgNVlMWg=w1060-fcrop64=1,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no</td>
+                        <td>People</td>
+                        <td>US</td>
+                        <td>Aug 10th, 2011</td>
+                        <td>$1K - $16.3K per day</td>
+                        <td align="right">16300.0</td>
+                        <td align="right">1000.0</td>
+                        <td align="right">8650.0</td>
+                    </tr>
+                    <tr>
+                        <td align="right">24</td>
+                        <td>GMM GRAMMY OFFICIAL</td>
+                        <td>UCG9gfnA5UDoLvz-tC9B-HKw</td>
+                        <td>GMM Grammy บริษัทมหาชนผู้นำด้านสื่อธุรกิจเพลงและความบันเทิงครบวงจร เราผลิ...</td>
+                        <td align="right">14766384941.0</td>
+
+                        <td align="right">14958742</td>
+                        <td align="right">6283</td>
+                        <td>https://yt3.ggpht.com/ZObAQH6uUTA1vJQ_QfwLTExau9W8rUI0SdI6pOzQyTWoRR2eT8s1mXCz2lp1KqdYeGvCqLUKCjo=w1060-fcrop64=1,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no</td>
+                        <td>Music</td>
+                        <td>TH</td>
+                        <td>Nov 8th, 2010</td>
+                        <td>$1.8K - $28.2K per day</td>
+                        <td align="right">28200.0</td>
+                        <td align="right">1800.0</td>
+                        <td align="right">15000.0</td>
+                    </tr>
+                    <tr>
+                        <td align="right">25</td>
+                        <td>FunToys Collector Disney Toys…</td>
+                        <td>UCqdGW_m8Rim4FeMM29keDEg</td>
+                        <td>Welcome to Playtime Funtoys Collector Disney Toys Review for toddlers, babies, infants and pre-school children. I review toys n dolls from Disney, Pixar, ...</td>
+                        <td align="right">14553333081.0</td>
+
+                        <td align="right">11548325</td>
+                        <td align="right">2627</td>
+                        <td>https://yt3.ggpht.com/fPxx7g5SXXWLl-j9YKGm0r7sxeq8VjVKLHKfIY6AyZjfbJjZq5_nipeXALrZg5hEUPPXqWTm7w=w1060-fcrop64=1,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no</td>
+                        <td>Entertainment</td>
+                        <td>US</td>
+                        <td>Apr 13th, 2011</td>
+                        <td>$518 - $8.3K per day</td>
+                        <td align="right">518000.0</td>
+                        <td align="right">8300.0</td>
+                        <td align="right">263150.0</td>
+                    </tr>
+                    <tr>
+                        <td align="right">26</td>
+                        <td>DanTDM</td>
+                        <td>UCS5Oz6CHmeoF7vSad0qqXfw</td>
+                        <td>Daily gaming videos with DanTDM :) BUSINESS ONLY :: management@dantdmteam.com.</td>
+                        <td align="right">14386683457.0</td>
+
+                        <td align="right">21174321</td>
+                        <td align="right">3054</td>
+                        <td>https://yt3.ggpht.com/pRwckg6X0lNYVSe-_XwSAnpOXdaFU3GibYKbiosbYT-ufnU2ByaL23TztqMXltJ76diicCiUjg=w1060-fcrop64=1,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no</td>
+                        <td>Games</td>
+                        <td>GB</td>
+                        <td>Jul 14th, 2012</td>
+                        <td>$1.3K - $20.3K per day</td>
+                        <td align="right">20300.0</td>
+                        <td align="right">1300.0</td>
+                        <td align="right">10800.0</td>
+                    </tr>
+                    <tr>
+                        <td align="right">27</td>
+                        <td>Spinnin&#39; Records</td>
+                        <td>UCpDJl2EmP7Oh90Vylx0dZtA</td>
+                        <td>The Spinnin&#39; Records YouTube channel is the home for all music videos of the world&#39;s leading dance record label! We feature the latest music videos by ...</td>
+                        <td align="right">14282244647.0</td>
+
+                        <td align="right">24694663</td>
+                        <td align="right">8743</td>
+                        <td>https://yt3.ggpht.com/QwM-KnKYteIwaVD941QF_ZgtDkIHbIHlGzlkyyWqFClgsem9eKaNhyIUimEYqYv1T9Nh61v6=w1060-fcrop64=1,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no</td>
+                        <td>Entertainment</td>
+                        <td>NL</td>
+                        <td>Jul 12th, 2007</td>
+                        <td>$1.4K - $22.1K per day</td>
+                        <td align="right">22100.0</td>
+                        <td align="right">1400.0</td>
+                        <td align="right">11750.0</td>
+                    </tr>
+                    <tr>
+                        <td align="right">28</td>
+                        <td>SAB TV</td>
+                        <td>UC6-F5tO8uklgE9Zy8IvbdFw</td>
+                        <td>SAB TV is India&#39;s only family comedy entertainment channel with a core brand promise of &#39;Asli Mazaa SAB Ke Saath Aata Hai&#39;. Watch SAB TV serials / SAB TV ...</td>
+                        <td align="right">13829599510.0</td>
+
+                        <td align="right">16291253</td>
+                        <td align="right">21916</td>
+                        <td>https://yt3.ggpht.com/D0NLFfGSSuTsMJ2JDS084EJVONV8wl3TO2WVKLzGCThi75eBdkcRZgIOhsqFeArlV-fwG9qN=w1060-fcrop64=1,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no</td>
+                        <td>Entertainment</td>
+                        <td>IN</td>
+                        <td>Aug 4th, 2007</td>
+                        <td>$6.8K - $109.3K per day</td>
+                        <td align="right">109300.0</td>
+                        <td align="right">6800.0</td>
+                        <td align="right">58050.0</td>
+                    </tr>
+                    <tr>
+                        <td align="right">29</td>
+                        <td>RihannaVEVO</td>
+                        <td>UC2xskkQVFEpLcGFnNSLQY0A</td>
+                        <td>Rihanna on Vevo - Official Music Videos, Live Performances, Interviews and more...</td>
+                        <td align="right">13689923585.0</td>
+
+                        <td align="right">26325044</td>
+                        <td align="right">106</td>
+                        <td>https://yt3.ggpht.com/diUpREi-r-YQOUY01iYJzSElcCiTDRLGREevcbIroXpYy-ytG-SpAsWBGW6AaBnzgJEr0yaTrQ=w1060-fcrop64=1,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no</td>
+                        <td>Music</td>
+                        <td>US</td>
+                        <td>May 12th, 2009</td>
+                        <td>$934 - $14.9K per day</td>
+                        <td align="right">934000.0</td>
+                        <td align="right">14900.0</td>
+                        <td align="right">474450.0</td>
+                    </tr>
+                    <tr>
+                        <td align="right">30</td>
+                        <td>WORLDSTARHIPHOP</td>
+                        <td>UC-yXuc1__OzjwpsJPlxYUCQ</td>
+                        <td>The official WorldstarHipHop channel featuring exclusive music video premieres, comedy, behind the scenes, original series and more. WorldstarHipHop is ...</td>
+                        <td align="right">13676373145.0</td>
+
+                        <td align="right">19641487</td>
+                        <td align="right">5189</td>
+                        <td>https://yt3.ggpht.com/MxQO2TmzKtptvvjE9Uu2440ihsVTAD8yp_f-HtfWzmtjrpUB41Qc0JosOHaYD-AKKVmsGivETg=w1060-fcrop64=1,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no</td>
+                        <td>Music</td>
+                        <td>US</td>
+                        <td>Nov 8th, 2008</td>
+                        <td>$3.4K - $54.7K per day</td>
+                        <td align="right">54700.0</td>
+                        <td align="right">3400.0</td>
+                        <td align="right">29050.0</td>
+                    </tr>
+                    <tr>
+                        <td align="right">31</td>
+                        <td>[토이푸딩] ToyPudding TV</td>
+                        <td>UCKqx9r4mrFglauNBJc1L_eg</td>
+                        <td>Hi, welcome to ToyPudding Channel : ) We are family~ Let&#39;s play and learn with kids toys and baby doli kids songs and games Have a good time and feel free to ...</td>
+                        <td align="right">13416111500.0</td>
+
+                        <td align="right">22310442</td>
+                        <td align="right">2479</td>
+                        <td>https://yt3.ggpht.com/VnkwtReIT97CR3Gqb3zrqZY4bKv7anLxZHASyL-gmc447g5xW-qcAKd2E-2nCIZvNQ2EE3PFmlA=w1060-fcrop64=1,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no</td>
+                        <td>Entertainment</td>
+                        <td>US</td>
+                        <td>May 13th, 2014</td>
+                        <td>$2.2K - $35.7K per day</td>
+                        <td align="right">35700.0</td>
+                        <td align="right">2200.0</td>
+                        <td align="right">18950.0</td>
+                    </tr>
+                    <tr>
+                        <td align="right">32</td>
+                        <td>SMTOWN</td>
+                        <td>UCEf_Bc-KVd7onSeifS3py9g</td>
+                        <td>Welcome to S.M.Entertainment Official YouTube Channel! We deeply appreciate all of your love and support again. You can enjoy SM artist&#39;s latest videos on ...</td>
+                        <td align="right">13347428718.0</td>
+
+                        <td align="right">17856501</td>
+                        <td align="right">3612</td>
+                        <td>https://yt3.ggpht.com/PkIenglCpqYRJ5ZZUjaqp0cVmIIE5cB-jBnn6Oa068FF3vk2snLxgWQKlIzHmo5Mgf-ZxSfFjg=w1060-fcrop64=1,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no</td>
+                        <td>Music</td>
+                        <td>KR</td>
+                        <td>Mar 18th, 2006</td>
+                        <td>$2.1K - $33.6K per day</td>
+                        <td align="right">33600.0</td>
+                        <td align="right">2100.0</td>
+                        <td align="right">17850.0</td>
+                    </tr>
+                    <tr>
+                        <td align="right">33</td>
+                        <td>EminemVEVO</td>
+                        <td>UC20vb-R_px4CguHzzBPhoyQ</td>
+                        <td>Eminem on Vevo - Official Music Videos, Live Performances, Interviews and more...</td>
+                        <td align="right">12670260378.0</td>
+
+                        <td align="right">26374940</td>
+                        <td align="right">84</td>
+                        <td>https://yt3.ggpht.com/swpxuPwV7fLRFGHc5ODK60cwzYtsUeC2eAcV9wUBLSiEYV86S1zou_5qjDog77j2wqq_Opi6G1I=w1060-fcrop64=1,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no</td>
+                        <td>Music</td>
+                        <td>US</td>
+                        <td>May 12th, 2009</td>
+                        <td>$1.5K - $24.7K per day</td>
+                        <td align="right">24700.0</td>
+                        <td align="right">1500.0</td>
+                        <td align="right">13100.0</td>
+                    </tr>
+                    <tr>
+                        <td align="right">34</td>
+                        <td>PopularMMOs</td>
+                        <td>UCpGdL9Sn3Q5YWUH2DVUW1Ug</td>
+                        <td>Your source for epic Minecraft content! Don&#39;t forget to subscribe! - Minecraft Mob Battles and Arena Battles - Epic Modded Let&#39;s Plays - Mod Showcases ...</td>
+                        <td align="right">12613552149.0</td>
+
+                        <td align="right">16291553</td>
+                        <td align="right">4376</td>
+                        <td>https://yt3.ggpht.com/R49VJ27MQDqDd3riWrjYOZUX2eF-bEUD1t44J3epA0PgxM3X_lDxUN6y0pRXE4rcitfukb3nRg=w1060-fcrop64=1,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no</td>
+                        <td>Games</td>
+                        <td>US</td>
+                        <td>Apr 17th, 2012</td>
+                        <td>$922 - $14.8K per day</td>
+                        <td align="right">922000.0</td>
+                        <td align="right">14800.0</td>
+                        <td align="right">468400.0</td>
+                    </tr>
+                    <tr>
+                        <td align="right">35</td>
+                        <td>Super Simple Songs - Kids Songs</td>
+                        <td>UCLsooMJoIpl_7ux2jvdPB-Q</td>
+                        <td>Kids songs, nursery rhymes, and more! Learn and explore through song and movement with Super Simple Songs! Our team of educators has created some of ...</td>
+                        <td align="right">12452569863.0</td>
+
+                        <td align="right">13677946</td>
+                        <td align="right">452</td>
+                        <td>https://yt3.ggpht.com/miGqt1eJHJJDuqmIIEHlzcdmHUHegV1p01-45VyeYajYr188iInmbBDX7PaUMTrDmdAo6iyZ=w1060-fcrop64=1,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no</td>
+                        <td>Education</td>
+                        <td>CA</td>
+                        <td>Sep 8th, 2006</td>
+                        <td>$3.5K - $55.3K per day</td>
+                        <td align="right">55300.0</td>
+                        <td align="right">3500.0</td>
+                        <td align="right">29400.0</td>
+                    </tr>
+                    <tr>
+                        <td align="right">36</td>
+                        <td>5-Minute Crafts</td>
+                        <td>UC295-Dw_tDNtZXFeAPAW6Aw</td>
+                        <td>Fun diy-projects, crafts, experience the joy of doing it yourself! OFFICIAL CHANNEL.</td>
+                        <td align="right">12427624755.0</td>
+
+                        <td align="right">50269347</td>
+                        <td align="right">2758</td>
+                        <td>https://yt3.ggpht.com/CTGN_jASBWV_U8nm0u_VJreGs5KIrA4E-NArFiAt1CAwtzGzakPoYE2SrzpPlLulQKDaaWZHoA=w1060-fcrop64=1,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no</td>
+                        <td>Howto</td>
+                        <td>US</td>
+                        <td>Nov 15th, 2016</td>
+                        <td>$4.8K - $77.3K per day</td>
+                        <td align="right">77300.0</td>
+                        <td align="right">4800.0</td>
+                        <td align="right">41050.0</td>
+                    </tr>
+                    <tr>
+                        <td align="right">37</td>
+                        <td>1theK (원더케이)</td>
+                        <td>UCweOkPb1wVVH0Q0Tlj4a5Pw</td>
+                        <td>Welcome to the official YouTube page of worldwide K-POP Channel 1theK Enjoy the leading K-Pop artists&#39; M/Vs, teasers and more exclusive originals for the ...</td>
+                        <td align="right">12405741352.0</td>
+
+                        <td align="right">15414057</td>
+                        <td align="right">14734</td>
+                        <td>https://yt3.ggpht.com/kqFc_GaEoMDoA75J55xFEuLS4D8XmDA6fjRawiqx_1RTfjSsmD7SZ5xNsbGoCuvb0Ixt7CG_hQ=w1060-fcrop64=1,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no</td>
+                        <td>Music</td>
+                        <td>KR</td>
+                        <td>Jan 31st, 2011</td>
+                        <td>$2.7K - $44K per day</td>
+                        <td align="right">44000.0</td>
+                        <td align="right">2700.0</td>
+                        <td align="right">23350.0</td>
+                    </tr>
+                    <tr>
+                        <td align="right">38</td>
+                        <td>Maroon5VEVO</td>
+                        <td>UCN1hnUccO4FD5WfM7ithXaw</td>
+                        <td>Maroon 5 on Vevo - Official Music Videos, Live Performances, Interviews and more...</td>
+                        <td align="right">12206052946.0</td>
+
+                        <td align="right">15548586</td>
+                        <td align="right">114</td>
+                        <td>https://yt3.ggpht.com/mKcGKwacuqAvM8JGVsgJXTklhO8DD3sDZ4HxmFIYTtX2eUJlNCE4SUzBvaZUrMP93m8Ll_JY=w1060-fcrop64=1,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no</td>
+                        <td>Music</td>
+                        <td>US</td>
+                        <td>May 12th, 2009</td>
+                        <td>$2.4K - $39.2K per day</td>
+                        <td align="right">39200.0</td>
+                        <td align="right">2400.0</td>
+                        <td align="right">20800.0</td>
+                    </tr>
+                    <tr>
+                        <td align="right">39</td>
+                        <td>WatchMojo.com</td>
+                        <td>UCaWd5_7JhbQBe4dknZhsHJg</td>
+                        <td>Top 10 lists on Music, TV, Film and Video Games. We publish 4 or more Top 10s daily. Subscribe for new top 10 lists every day, and binge watch on Top 10s ...</td>
+                        <td align="right">12007561965.0</td>
+
+                        <td align="right">19992625</td>
+                        <td align="right">16247</td>
+                        <td>https://yt3.ggpht.com/7u7wvkWiIgBZolUaUMinLd5BllMlfH5QD8rbwcXbdHgg2IJcvlLiK4xInX3ZG_6Jiv4RHkv_Rg=w1060-fcrop64=1,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no</td>
+                        <td>Entertainment</td>
+                        <td>CA</td>
+                        <td>Jan 25th, 2007</td>
+                        <td>$1.2K - $18.7K per day</td>
+                        <td align="right">18700.0</td>
+                        <td align="right">1200.0</td>
+                        <td align="right">9950.0</td>
+                    </tr>
+                    <tr>
+                        <td align="right">40</td>
+                        <td>EnriqueIglesiasVEVO</td>
+                        <td>UCVttQE6tS_agDSAU61Q65aA</td>
+                        <td>Enrique Iglesias turns up the heat again on his tenth full-length album SEX AND LOVE. Boasting sizzling singles such as &quot;I&#39;m A Freak&quot; featuring Pitbull, it&#39;s the ...</td>
+                        <td align="right">11861999603.0</td>
+
+                        <td align="right">13697256</td>
+                        <td align="right">131</td>
+                        <td>https://yt3.ggpht.com/G3Cv1A2K2RJicHwi8hAct7vETr1wn_PEh5s1jCj1xswgim5NofHGEsty7lKd6QNPNRZKTf6D=w1060-fcrop64=1,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no</td>
+                        <td>Music</td>
+                        <td>US</td>
+                        <td>May 12th, 2009</td>
+                        <td>$804 - $12.9K per day</td>
+                        <td align="right">804000.0</td>
+                        <td align="right">12900.0</td>
+                        <td align="right">408450.0</td>
+                    </tr>
+                    <tr>
+                        <td align="right">41</td>
+                        <td>Family Fun Pack</td>
+                        <td>UCvthuVsurPaVz2a7_4LepGg</td>
+                        <td>If someone&#39;s having fun, it&#39;s our family! Our daily family friendly videos include challenges, parks, epic road trips, vlogs, toys, games, food, clothes and lots of ...</td>
+                        <td align="right">11488565071.0</td>
+
+                        <td align="right">7884033</td>
+                        <td align="right">1425</td>
+                        <td>https://yt3.ggpht.com/EuGidpwEWjKCVyjwV1m3B-xy68d_qNPmSRmqENrFkh-NNnxo3R-_HganRy62HWpt1txNb8wO6Q=w1060-fcrop64=1,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no</td>
+                        <td>People</td>
+                        <td>US</td>
+                        <td>Oct 3rd, 2011</td>
+                        <td>$886 - $14.2K per day</td>
+                        <td align="right">886000.0</td>
+                        <td align="right">14200.0</td>
+                        <td align="right">450100.0</td>
+                    </tr>
+                    <tr>
+                        <td align="right">42</td>
+                        <td>Baby Big Mouth</td>
+                        <td>UCWr4vlkj5xXQ4bSXNeTT2AA</td>
+                        <td>It&#39;s a SURPRISE PARTY! Join BABY BIG MOUTH on an adventure of fun and discovery with surprise eggs, exciting new toys from around the world and more!</td>
+                        <td align="right">11306498971.0</td>
+
+                        <td align="right">10557798</td>
+                        <td align="right">3513</td>
+                        <td>https://yt3.ggpht.com/-rXqIkirWn70KN5msZO6AyMEx8Rz2Z1ynpo64e3A5n3A8zpKGhpJ7jGNk_H_PXhP2OLD8ZxN=w1060-fcrop64=1,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no</td>
+                        <td>Entertainment</td>
+                        <td>CA</td>
+                        <td>Mar 5th, 2013</td>
+                        <td>$1.1K - $16.9K per day</td>
+                        <td align="right">16900.0</td>
+                        <td align="right">1100.0</td>
+                        <td align="right">9000.0</td>
+                    </tr>
+                    <tr>
+                        <td align="right">43</td>
+                        <td>Ch3Thailand</td>
+                        <td>UC48h7Dst_hX82HxOf3xJw_w</td>
+                        <td>YouTube Official ของ สถานีวิทยุโทรทัศน์ไทยทีวีสีช่อง 3 ติดตามความเคลื่อนไหวต่าง...</td>
+                        <td align="right">11293034959.0</td>
+
+                        <td align="right">15317346</td>
+                        <td align="right">55640</td>
+                        <td>https://yt3.ggpht.com/3cBn0f5aQoWGDh1-5nZevmMVy3ebphpUIox2tlYiLb40FPAs-lfWbDeMlqNOjMoIL3itmlBc=w1060-fcrop64=1,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no</td>
+                        <td>Entertainment</td>
+                        <td>TH</td>
+                        <td>May 29th, 2014</td>
+                        <td>$1.4K - $21.7K per day</td>
+                        <td align="right">21700.0</td>
+                        <td align="right">1400.0</td>
+                        <td align="right">11550.0</td>
+                    </tr>
+                    <tr>
+                        <td align="right">44</td>
+                        <td>jbalvinVEVO</td>
+                        <td>UCrHL_BF5lHyK43BxLU8-vBQ</td>
+                        <td>J Balvin en Vevo – Videoclips oficiales, Lyric videos, Sesiones en vivo, Entrevistas y muchos más...</td>
+                        <td align="right">11286450032.0</td>
+
+                        <td align="right">13926687</td>
+                        <td align="right">144</td>
+                        <td>https://yt3.ggpht.com/pU-885JSRuBPSFoI-8HqzEcZ-l1uSnVoue3RBy4udgQ4Xj_L7dv4gCCtbZuwzV-dOjc80Ewkbg=w1060-fcrop64=1,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no</td>
+                        <td>Music</td>
+                        <td>CO</td>
+                        <td>Sep 30th, 2010</td>
+                        <td>$1.3K - $20K per day</td>
+                        <td align="right">20000.0</td>
+                        <td align="right">1300.0</td>
+                        <td align="right">10650.0</td>
+                    </tr>
+                    <tr>
+                        <td align="right">45</td>
+                        <td>CVS 3D Rhymes</td>
+                        <td>UCsPF3cApzCohxPp5oKdoWSQ</td>
+                        <td>3D Animation Nursery Rhymes, Stories and Short Films, Devotional video Songs (albums) clips in English, Telugu, Hindi, Tamil, Kannada, Malayalam, Bengali, ...</td>
+                        <td align="right">11208645602.0</td>
+
+                        <td align="right">18552601</td>
+                        <td align="right">317</td>
+                        <td>https://yt3.ggpht.com/-pm9Qg9IzjAB5Lp2csSFwZJjr9jZsnNz_oz0Ug0sfwJfosct8MP-926YTRWtz6DpQoiIwGJyLrM=w1060-fcrop64=1,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no</td>
+                        <td>Education</td>
+                        <td>IN</td>
+                        <td>Aug 26th, 2008</td>
+                        <td>$2.2K - $34.8K per day</td>
+                        <td align="right">34800.0</td>
+                        <td align="right">2200.0</td>
+                        <td align="right">18500.0</td>
+                    </tr>
+                    <tr>
+                        <td align="right">46</td>
+                        <td>NickyJamTV</td>
+                        <td>UCpb_iJuhFe8V6rQdbNqfAlQ</td>
+                        <td>Canal Oficial del artista Urbano Puertoriqueño, Nicky Jam http://www.nickyjampr.net.</td>
+                        <td align="right">11108585115.0</td>
+
+                        <td align="right">17643129</td>
+                        <td align="right">219</td>
+                        <td>https://yt3.ggpht.com/rcQZ0r_nnomhY8gXfrh7ZBkTQAzMzNBxFfLqbitYD3Adpoja30iucWcOyOO6SiquKh7PxDm7uMI=w1060-fcrop64=1,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no</td>
+                        <td>Music</td>
+                        <td>PR</td>
+                        <td>Jan 10th, 2012</td>
+                        <td>$1K - $16.1K per day</td>
+                        <td align="right">16100.000000000002</td>
+                        <td align="right">1000.0</td>
+                        <td align="right">8550.0</td>
+                    </tr>
+                    <tr>
+                        <td align="right">47</td>
+                        <td>ArianaGrandeVevo</td>
+                        <td>UC0VOyT2OCBKdQhF3BAbZ-1g</td>
+                        <td>Listen to thank u, next: https://arianagrande.lnk.to/tun-albumYD.</td>
+                        <td align="right">11054202408.0</td>
+
+                        <td align="right">18912093</td>
+                        <td align="right">106</td>
+                        <td>https://yt3.ggpht.com/ZAEWfHDfcWbiYa2m9sY1h9Pn5FCFcFirbh65Qy3nK6ySs8YYftj9OrDz4_YTfEitBRbOq0Z9=w1060-fcrop64=1,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no</td>
+                        <td>Music</td>
+                        <td>US</td>
+                        <td>Oct 21st, 2010</td>
+                        <td>$3.9K - $62K per day</td>
+                        <td align="right">62000.0</td>
+                        <td align="right">3900.0</td>
+                        <td align="right">32950.0</td>
+                    </tr>
+                    <tr>
+                        <td align="right">48</td>
+                        <td>Colors TV</td>
+                        <td>UC55IWqFLDH1Xp7iu1_xknRA</td>
+                        <td>Welcome to the official main channel of Colors TV! Show some love people by subscribing to our channel: ...</td>
+                        <td align="right">10943558006.0</td>
+
+                        <td align="right">16220223</td>
+                        <td align="right">27846</td>
+                        <td>https://yt3.ggpht.com/of3VH2D8wMGVTy4W3EIKCmICKgAfirFjo6k1vcyUzVt9L0TAGyufy9xS6nJHtJtx5DCWZ5QIDg=w1060-fcrop64=1,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no</td>
+                        <td>Entertainment</td>
+                        <td>IN</td>
+                        <td>Jun 13th, 2008</td>
+                        <td>$3.6K - $58K per day</td>
+                        <td align="right">58000.0</td>
+                        <td align="right">3600.0</td>
+                        <td align="right">30800.0</td>
+                    </tr>
+                    <tr>
+                        <td align="right">49</td>
+                        <td>Galinha Pintadinha</td>
+                        <td>UCBAb_DK4GYZqZR9MFA7y2Xg</td>
+                        <td>Canal da Galinha Pintadinha com um monte de desenhos animados musicais. Conheça nosso site: www.galinhapintadinha.com.br.</td>
+                        <td align="right">10941298542.0</td>
+
+                        <td align="right">15637284</td>
+                        <td align="right">48</td>
+                        <td>https://yt3.ggpht.com/x6_f-uSPVMdCZHs497uKIoVy1qZeGDZFIEtYGUtlW8mmouxpDsZKMitochjYl6AWHevpvXksjg=w1060-fcrop64=1,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no</td>
+                        <td>Music</td>
+                        <td>BR</td>
+                        <td>Aug 30th, 2006</td>
+                        <td>$2.2K - $35K per day</td>
+                        <td align="right">35000.0</td>
+                        <td align="right">2200.0</td>
+                        <td align="right">18600.0</td>
+                    </tr>
+                    <tr>
+                        <td align="right">50</td>
+                        <td>MalumaVEVO</td>
+                        <td>UCFkoPRmuxqr37jvGmmpzhzQ</td>
+                        <td>Maluma en Vevo – Videoclips oficiales, Lyric videos, Sesiones en vivo, Entrevistas y muchos más...</td>
+                        <td align="right">10807537931.0</td>
+
+                        <td align="right">14958912</td>
+                        <td align="right">92</td>
+                        <td>https://yt3.ggpht.com/om5DGmVfnBoiu7XDXj4WrYWmE9kkA-JGHHZoiSpw-httjX9h237RJ301taKswUSsz4OFKjRWtas=w1060-fcrop64=1,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no</td>
+                        <td>Music</td>
+                        <td>US</td>
+                        <td>Jun 15th, 2011</td>
+                        <td>$800 - $12.8K per day</td>
+                        <td align="right">800000.0</td>
+                        <td align="right">12800.0</td>
+                        <td align="right">406400.0</td>
+                    </tr>
+                    <tr>
+                        <td align="right">51</td>
+                        <td>The Tonight Show Starring Jimmy…</td>
+                        <td>UC8-Th83bH_thdKZDJCrn88g</td>
+                        <td>Watch The Tonight Show Starring Jimmy Fallon Weeknights 11:35/10:35c The Tonight Show Starring Jimmy Fallon features hilarious highlights from the show ...</td>
+                        <td align="right">10759425275.0</td>
+
+                        <td align="right">20095784</td>
+                        <td align="right">5056</td>
+                        <td>https://yt3.ggpht.com/aOm7OzQ4T5nuKmpz5X8jB8u73rciCV7-TehmNzcY4g-wmbAbDyfXzFcailgnx38CCMWwBGTd2g=w1060-fcrop64=1,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no</td>
+                        <td>Comedy</td>
+                        <td>US</td>
+                        <td>Jan 8th, 2006</td>
+                        <td>$1.7K - $27.9K per day</td>
+                        <td align="right">27900.0</td>
+                        <td align="right">1700.0</td>
+                        <td align="right">14800.0</td>
+                    </tr>
+                    <tr>
+                        <td align="right">52</td>
+                        <td>Markiplier</td>
+                        <td>UC7_YxT-KID8kRbqZo7MyscQ</td>
+                        <td>Welcome to Markiplier! Here you&#39;ll find some hilarious gaming videos, original comedy sketches, animated parodies, and other bits of entertainment!</td>
+                        <td align="right">10758813557.0</td>
+
+                        <td align="right">23278776</td>
+                        <td align="right">4324</td>
+                        <td>https://yt3.ggpht.com/exY4sFABRxVEpEhhETqpBF4fSvm1ox4l6Z21H7Q4EyoLLuBFaamPjz0gSzchQ0XbXEBraud63ZA=w1060-fcrop64=1,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no</td>
+                        <td>Games</td>
+                        <td>US</td>
+                        <td>May 26th, 2012</td>
+                        <td>$1.1K - $17.7K per day</td>
+                        <td align="right">17700.0</td>
+                        <td align="right">1100.0</td>
+                        <td align="right">9400.0</td>
+                    </tr>
+                    <tr>
+                        <td align="right">53</td>
+                        <td>CookieSwirlC</td>
+                        <td>UCelMeixAOTs2OQAAi9wU8-g</td>
+                        <td>Play The official Cookie Swirl World App Game for FREE: https://itunes.apple.com/us/app/cookie-swirl-world/id1445080198?ls=1&amp;mt=8 ...</td>
+                        <td align="right">10737890437.0</td>
+
+                        <td align="right">11106628</td>
+                        <td align="right">3042</td>
+                        <td>https://yt3.ggpht.com/-eJBxppxlirWGNnuOSihj7CUk0tWwWkBG2QqGKd7MOIONdTui_ReWDoqcwcGuiMEdZYGofUE=w1060-fcrop64=1,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no</td>
+                        <td>Entertainment</td>
+                        <td>US</td>
+                        <td>Nov 3rd, 2013</td>
+                        <td>$2.2K - $34.9K per day</td>
+                        <td align="right">34900.0</td>
+                        <td align="right">2200.0</td>
+                        <td align="right">18550.0</td>
+                    </tr>
+                    <tr>
+                        <td align="right">54</td>
+                        <td>Fueled By Ramen</td>
+                        <td>UClVrJwcIy7saPcGc1nct80A</td>
+                        <td>The Official Fueled By Ramen YouTube Channel - home to grandson, SWMRS, ONE OK ROCK, flor, Dashboard Confessional, nothing,nowhere., E^ST, The ...</td>
+                        <td align="right">10735392406.0</td>
+
+                        <td align="right">11796220</td>
+                        <td align="right">1154</td>
+                        <td>https://yt3.ggpht.com/CiN5vYC_QY_XLQsb6WOi_O7Z9uLWK1F9MEuP-45yQy9mvEn6YRhITmhcqk5l6Qy-i-fAhfyN=w1060-fcrop64=1,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no</td>
+                        <td>Music</td>
+                        <td>US</td>
+                        <td>Jun 9th, 2006</td>
+                        <td>$1.2K - $19.5K per day</td>
+                        <td align="right">19500.0</td>
+                        <td align="right">1200.0</td>
+                        <td align="right">10350.0</td>
+                    </tr>
+                    <tr>
+                        <td align="right">55</td>
+                        <td>jacksepticeye</td>
+                        <td>UCYzPXprvl5Y-Sf0g4vX-m6g</td>
+                        <td>Top of the mornin&#39; to ya, laddies! Welcome to my channel, my name is jacksepticeye. I am a very energetic let&#39;s player with a big heart who just wants to have fun ...</td>
+                        <td align="right">10701556106.0</td>
+
+                        <td align="right">21596909</td>
+                        <td align="right">4035</td>
+                        <td>https://yt3.ggpht.com/HYCw-C70hrCeaf72A2qwRK0wB1ynBuhZDpScAhQZfVZXkNjisJf86cKmQne7rkpoiBT6RLVHXQ=w1060-fcrop64=1,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no</td>
+                        <td>Games</td>
+                        <td>IE</td>
+                        <td>Feb 24th, 2007</td>
+                        <td>$1.1K - $17.9K per day</td>
+                        <td align="right">17900.0</td>
+                        <td align="right">1100.0</td>
+                        <td align="right">9500.0</td>
+                    </tr>
+                    <tr>
+                        <td align="right">56</td>
+                        <td>VanossGaming</td>
+                        <td>UCKqH_9mk1waLgBiL2vT5b9g</td>
+                        <td>Official Vanoss Gaming YouTube Channel.</td>
+                        <td align="right">10569359953.0</td>
+
+                        <td align="right">24264795</td>
+                        <td align="right">949</td>
+                        <td>https://yt3.ggpht.com/LHNfbOc9DlXFoTeizHv9AWZOOxMMgu_esbRO49qCzWnj48bsnR9IxpKSEjOT9TwDKKAPeGHYOw=w1060-fcrop64=1,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no</td>
+                        <td>Games</td>
+                        <td>CA</td>
+                        <td>Sep 15th, 2011</td>
+                        <td>$989 - $15.8K per day</td>
+                        <td align="right">989000.0</td>
+                        <td align="right">15800.0</td>
+                        <td align="right">502400.0</td>
+                    </tr>
+                    <tr>
+                        <td align="right">57</td>
+                        <td>Speed Records</td>
+                        <td>UCOsyDsO5tIt-VZ1iwjdQmew</td>
+                        <td>Speed Records, the biggest Punjabi Music Record label in the world combining feet tapping tunes accompanied with vibrant voices as the identifier of Punjabi ...</td>
+                        <td align="right">10376140749.0</td>
+
+                        <td align="right">20924577</td>
+                        <td align="right">6584</td>
+                        <td>https://yt3.ggpht.com/FJVmLPUiqIH3x1kyXJw_6IP0NIaircmAxtjNQWZjiH2IWcvX7iylczbsF84FWzJv7hvlHfpkmg=w1060-fcrop64=1,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no</td>
+                        <td>Music</td>
+                        <td>IN</td>
+                        <td>Nov 22nd, 2012</td>
+                        <td>$3.7K - $59.2K per day</td>
+                        <td align="right">59200.0</td>
+                        <td align="right">3700.0</td>
+                        <td align="right">31450.0</td>
+                    </tr>
+                    <tr>
+                        <td align="right">58</td>
+                        <td>CalvinHarrisVEVO</td>
+                        <td>UCaHNFIob5Ixv74f5on3lvIw</td>
+                        <td>Calvin Harris on Vevo - Official Music Videos, Live Performances, Interviews and more...</td>
+                        <td align="right">10364856115.0</td>
+
+                        <td align="right">12679436</td>
+                        <td align="right">118</td>
+                        <td>https://yt3.ggpht.com/3lrPxJker9g65f0OVqt4y4Lu6DiXYnAAcYcPMzeWmtJ_SQCN7R9JmS74nQH1xuWz3HQPZOtptw=w1060-fcrop64=1,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no</td>
+                        <td>Music</td>
+                        <td>US</td>
+                        <td>Oct 15th, 2009</td>
+                        <td>$1.5K - $23.6K per day</td>
+                        <td align="right">23600.0</td>
+                        <td align="right">1500.0</td>
+                        <td align="right">12550.0</td>
+                    </tr>
+                    <tr>
+                        <td align="right">59</td>
+                        <td>LuisFonsiVEVO</td>
+                        <td>UCLp8RBhQHu9wSsq62j_Md6A</td>
+                        <td>Luis Fonsi en Vevo – Videoclips oficiales, Lyric videos, Sesiones en vivo, Entrevistas y muchos más...</td>
+                        <td align="right">10361622549.0</td>
+
+                        <td align="right">18414506</td>
+                        <td align="right">66</td>
+                        <td>https://yt3.ggpht.com/1Fjwb2P6FQcV34SVDfPZwxRdU45z-_nSHSow4jGE2ReOyawqQUUQts3X2OaG1oABVcsmdNQq=w1060-fcrop64=1,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no</td>
+                        <td>Music</td>
+                        <td>US</td>
+                        <td>May 12th, 2009</td>
+                        <td>$2.3K - $36.9K per day</td>
+                        <td align="right">36900.0</td>
+                        <td align="right">2300.0</td>
+                        <td align="right">19600.0</td>
+                    </tr>
+                    <tr>
+                        <td align="right">60</td>
+                        <td>Movieclips Trailers</td>
+                        <td>UCi8e0iOVk1fEOogdfu4YgfA</td>
+                        <td>The Fandango MOVIECLIPS TRAILERS channel delivers hot new trailers, teasers, and sneak peeks for all the best upcoming movies. Subscribe to stay up to ...</td>
+                        <td align="right">10325307026.0</td>
+
+                        <td align="right">13238678</td>
+                        <td align="right">7785</td>
+                        <td>https://yt3.ggpht.com/3UWedbE9PJVz21MWov3zpM6DHGgyqlmO6SchENukYntHqyuYzLlqmpyyAp2TMHbOrRdNn9tNBZA=w1060-fcrop64=1,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no</td>
+                        <td>Film</td>
+                        <td>US</td>
+                        <td>Apr 1st, 2011</td>
+                        <td>$785 - $12.6K per day</td>
+                        <td align="right">785000.0</td>
+                        <td align="right">12600.0</td>
+                        <td align="right">398800.0</td>
+                    </tr>
+                    <tr>
+                        <td align="right">61</td>
+                        <td>Badabun</td>
+                        <td>UCYWOjHweP2V-8kGKmmAmQJQ</td>
+                        <td>Contacto: contacto@vuntu.com Ventas: Tel (664) 480-0922.</td>
+                        <td align="right">10312081951.0</td>
+
+                        <td align="right">36876670</td>
+                        <td align="right">3786</td>
+                        <td>https://yt3.ggpht.com/Z0bCCruxn5GeHzgReCf60Q5dmyycBINUmk76FOrH5VwEHdPlRtbYkg2Bl-E93gGbk3vB1vFTug=w1060-fcrop64=1,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no</td>
+                        <td>Entertainment</td>
+                        <td>MX</td>
+                        <td>Oct 14th, 2014</td>
+                        <td>$7.8K - $124.7K per day</td>
+                        <td align="right">124700.0</td>
+                        <td align="right">7800.0</td>
+                        <td align="right">66250.0</td>
+                    </tr>
+                    <tr>
+                        <td align="right">62</td>
+                        <td>GR6 EXPLODE</td>
+                        <td>UCNUQK9mQoqi4yNXw2_Rj6SA</td>
+                        <td>GR6 Explode, um dos maiores canais de Funk. Contrate nossos artistas: (11) 2201-3648 © 2019 GR6 Explode/GR6 Filmes.</td>
+                        <td align="right">10114086393.0</td>
+
+                        <td align="right">21890466</td>
+                        <td align="right">2749</td>
+                        <td>https://yt3.ggpht.com/V7qtbqyhQ0nA-pKDlYuV4j9lE_hydFoW82UXHPSESozmgVSNdgUb6j9Hnxut_yFYTQuehQFTSQ=w1060-fcrop64=1,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no</td>
+                        <td>Music</td>
+                        <td>BR</td>
+                        <td>Aug 5th, 2014</td>
+                        <td>$3.5K - $56K per day</td>
+                        <td align="right">56000.0</td>
+                        <td align="right">3500.0</td>
+                        <td align="right">29750.0</td>
+                    </tr>
+                    <tr>
+                        <td align="right">63</td>
+                        <td>FGTeeV</td>
+                        <td>UCC-RHF_77zQdKcA75hr5oTQ</td>
+                        <td>FGTeeV, the Family Gaming team, brings you the premiere YouTube channel for family gamers. Meet FGTeeV Duddy his wife FGTEEV Mom or Moomy, their ...</td>
+                        <td align="right">10089186654.0</td>
+
+                        <td align="right">10336110</td>
+                        <td align="right">1215</td>
+                        <td>https://yt3.ggpht.com/CbGLWWs8D635RoeVoRPWliakyClbOPHA2plh4a31rqKevUpsyQJMOmmBl-4qP6msR3d7eKtr=w1060-fcrop64=1,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no</td>
+                        <td>Games</td>
+                        <td>US</td>
+                        <td>May 24th, 2013</td>
+                        <td>$2.6K - $42.1K per day</td>
+                        <td align="right">42100.0</td>
+                        <td align="right">2600.0</td>
+                        <td align="right">22350.0</td>
+                    </tr>
+                    <tr>
+                        <td align="right">64</td>
+                        <td>VEGETTA777</td>
+                        <td>UCam8T03EOFBsNdR0thrFHdQ</td>
+                        <td>CODIGO CREADOR FORTNITE - VEGETTA777 ♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥ UNICORNIO MORADO ♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥♥...</td>
+                        <td align="right">10083928473.0</td>
+
+                        <td align="right">25980655</td>
+                        <td align="right">5055</td>
+                        <td>https://yt3.ggpht.com/YszVk7-ysDINcdDLmSy9B5tr81TtaTsDLfKE_5fQ8YUGdGFM0wnZhifWm31YnOxvEJGWB2_F=w1060-fcrop64=1,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no</td>
+                        <td>Games</td>
+                        <td>ES</td>
+                        <td>Mar 2nd, 2008</td>
+                        <td>$1.1K - $16.9K per day</td>
+                        <td align="right">16900.0</td>
+                        <td align="right">1100.0</td>
+                        <td align="right">9000.0</td>
+                    </tr>
+                    <tr>
+                        <td align="right">65</td>
+                        <td>Ultra Music</td>
+                        <td>UC4rasfm9J-X4jNl9SvXp8xA</td>
+                        <td>Welcome to the Official Ultra Music channel, your destination for electronic dance music. Whether you want to listen to chill, electronic, dance, indie, trap, or pop ...</td>
+                        <td align="right">10064801858.0</td>
+
+                        <td align="right">17259379</td>
+                        <td align="right">3725</td>
+                        <td>https://yt3.ggpht.com/1z7r_USgR5wgXH43vaL7q95K_GMj85F7fC4CZtXfe0Y5YlD18ZXrg6FsFG75sOatSvwT0_TC6g=w1060-fcrop64=1,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no</td>
+                        <td>Music</td>
+                        <td>US</td>
+                        <td>Oct 24th, 2006</td>
+                        <td>$1.2K - $19.6K per day</td>
+                        <td align="right">19600.0</td>
+                        <td align="right">1200.0</td>
+                        <td align="right">10400.0</td>
+                    </tr>
+                    <tr>
+                        <td align="right">66</td>
+                        <td>Eros Now</td>
+                        <td>UCX52tYZiEh_mHoFja3Veciw</td>
+                        <td>ErosNow - The leading brand in Indian entertainment now brings you all the updates on our latest and blockbuster hits only on our official YouTube page ...</td>
+                        <td align="right">10015780433.0</td>
+
+                        <td align="right">16859253</td>
+                        <td align="right">9949</td>
+                        <td>https://yt3.ggpht.com/B80QFqA2rYEV-O1RgD55DjGp-4AGfxoS-_lN-yoahVs6zcx_vBXrxOI_2-bbxAaxLVVe7KTwLxc=w1060-fcrop64=1,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no</td>
+                        <td>Entertainment</td>
+                        <td>IN</td>
+                        <td>Feb 27th, 2007</td>
+                        <td>$2K - $32.2K per day</td>
+                        <td align="right">32200.000000000004</td>
+                        <td align="right">2000.0</td>
+                        <td align="right">17100.0</td>
+                    </tr>
+                    <tr>
+                        <td align="right">67</td>
+                        <td>CKN Toys</td>
+                        <td>UCfaZw8XH_zmAVkBst_MPD6w</td>
+                        <td>Welcome to CKN Toys channel.This is a family and children friendly channel reviewing kids toys and opening Giant SURPRISE EGG . We love all toys ...</td>
+                        <td align="right">9961706286.0</td>
+
+                        <td align="right">11525783</td>
+                        <td align="right">494</td>
+                        <td>https://yt3.ggpht.com/yEH9uZ3lkFO1wVj4ESRlxs2ijWTv4UfZjThN5Rv198ojkV9Y4bU13gpeErmsLp3J-1GdvSsjEY4=w1060-fcrop64=1,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no</td>
+                        <td>Entertainment</td>
+                        <td>AU</td>
+                        <td>Mar 28th, 2015</td>
+                        <td>$3.9K - $61.7K per day</td>
+                        <td align="right">61700.0</td>
+                        <td align="right">3900.0</td>
+                        <td align="right">32800.0</td>
+                    </tr>
+                    <tr>
+                        <td align="right">68</td>
+                        <td>one31</td>
+                        <td>UC8f7MkX4MFOOJ2SerXLInCA</td>
+                        <td>one31 ช่องทีวีดิจิทัลคมชัดระดับ HD ที่สร้างปรากฏการณ์ความสุขด้วยความบันเ...</td>
+                        <td align="right">9908551252.0</td>
+
+                        <td align="right">14177785</td>
+                        <td align="right">56617</td>
+                        <td>https://yt3.ggpht.com/A97jg-wwLZE4anWaI7ACcqb3Xfso1HLe8JAz4ibysBKvYYdYeb6XASNwEUqpQRzp6TizKOKRkQ=w1060-fcrop64=1,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no</td>
+                        <td>Entertainment</td>
+                        <td>TH</td>
+                        <td>Jan 10th, 2013</td>
+                        <td>$4.1K - $66.2K per day</td>
+                        <td align="right">66200.0</td>
+                        <td align="right">4100.0</td>
+                        <td align="right">35150.0</td>
+                    </tr>
+                    <tr>
+                        <td align="right">69</td>
+                        <td>قناة طيور الجنة |…</td>
+                        <td>UCozAuGJZ5MPoijz8IE_1Gtw</td>
+                        <td>قناة فضائية متخصصة للأطفال تبث عبر مدار النايلسات 11315 عمودي.. انطلقت عام 2008 محلقة في سماء الإعلام الطفولي...</td>
+                        <td align="right">9823185186.0</td>
+
+                        <td align="right">11337190</td>
+                        <td align="right">2299</td>
+                        <td>https://yt3.ggpht.com/shsnJ65oE0X3RQXGwHXUUCU4VGvRgCBGvu5B3efAkQLjdpAj2qi3JujUugLoh7PJaHI4PxNE4g=w1060-fcrop64=1,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no</td>
+                        <td>Music</td>
+                        <td>JO</td>
+                        <td>Nov 24th, 2008</td>
+                        <td>$2.8K - $44.1K per day</td>
+                        <td align="right">44100.0</td>
+                        <td align="right">2800.0</td>
+                        <td align="right">23450.0</td>
+                    </tr>
+                    <tr>
+                        <td align="right">70</td>
+                        <td>As/Is</td>
+                        <td>UCay_OLhWtf9iklq8zg_or0g</td>
+                        <td>Subscribe for daily videos &amp; series about beauty, fashion, style, body positivity, women&#39;s experiences and lifestyle, and to join a community of incredible women ...</td>
+                        <td align="right">9717889112.0</td>
+
+                        <td align="right">10291474</td>
+                        <td align="right">3744</td>
+                        <td>https://yt3.ggpht.com/vcUGYXEEExeFLWYqnivjfMSRU4Sjq1RuRf7OOQFMlcUQO9XYtzw2DYRms5IIoTmC_Tob9Wwt=w1060-fcrop64=1,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no</td>
+                        <td>People</td>
+                        <td>US</td>
+                        <td>Apr 9th, 2013</td>
+                        <td>$515 - $8.2K per day</td>
+                        <td align="right">515000.0</td>
+                        <td align="right">8200.0</td>
+                        <td align="right">261600.0</td>
+                    </tr>
+                    <tr>
+                        <td align="right">71</td>
+                        <td>GMA Network</td>
+                        <td>UCKL5hAuzgFQsyrsQKgU0Qng</td>
+                        <td>The OFFICIAL YouTube channel of GMA Network.</td>
+                        <td align="right">9581781042.0</td>
+
+                        <td align="right">8665617</td>
+                        <td align="right">72009</td>
+                        <td>https://yt3.ggpht.com/JPypr90bYtXkBehB3eK7zFs-x42zuuOtwTq32E1_Cqhw7DsHLYpCH5UOAdhFFXoppZdP9wGk=w1060-fcrop64=1,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no</td>
+                        <td>Entertainment</td>
+                        <td>PH</td>
+                        <td>Nov 20th, 2006</td>
+                        <td>$3.3K - $53.2K per day</td>
+                        <td align="right">53200.0</td>
+                        <td align="right">3300.0</td>
+                        <td align="right">28250.0</td>
+                    </tr>
+                    <tr>
+                        <td align="right">72</td>
+                        <td>YRF</td>
+                        <td>UCbTLwN10NoCU4WDzLf1JMOA</td>
+                        <td>Films. Music. Artistes. At our core, we&#39;re storytellers. From making high-budget blockbusters to youth-oriented films, from working with the biggest actors of the ...</td>
+                        <td align="right">9546412001.0</td>
+
+                        <td align="right">17957174</td>
+                        <td align="right">3662</td>
+                        <td>https://yt3.ggpht.com/46T9qNb27NKVEzluUt5HSvWPhFY-kaarJvDouVK1W61xnxZXcKKuk2TvIRuqWxbTdsshGZxM=w1060-fcrop64=1,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no</td>
+                        <td>Music</td>
+                        <td>IN</td>
+                        <td>Jun 7th, 2006</td>
+                        <td>$3K - $47.2K per day</td>
+                        <td align="right">47200.0</td>
+                        <td align="right">3000.0</td>
+                        <td align="right">25100.0</td>
+                    </tr>
+                    <tr>
+                        <td align="right">73</td>
+                        <td>Shemaroo Filmi Gaane</td>
+                        <td>UCP6uH_XlsxrXwZQ4DlqbqPg</td>
+                        <td>Welcome to Shemaroo Filmi Gaane, a treat for every music lover and Bollywood connoisseur! Chart buster songs from super-hit movies like Anand, Don, Bobby, ...</td>
+                        <td align="right">9445697702.0</td>
+
+                        <td align="right">20460091</td>
+                        <td align="right">5845</td>
+                        <td>https://yt3.ggpht.com/EiQ1Py3NBy8ZOUBg_NwZzfxBsSdXkPPU6WTwxs1fzZICMPeurvBE5qq4N8MPZsrT_LkS7Bislw=w1060-fcrop64=1,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no</td>
+                        <td>Music</td>
+                        <td>IN</td>
+                        <td>Jun 11th, 2010</td>
+                        <td>$4.1K - $65.9K per day</td>
+                        <td align="right">65900.0</td>
+                        <td align="right">4100.0</td>
+                        <td align="right">35000.0</td>
+                    </tr>
+                    <tr>
+                        <td align="right">74</td>
+                        <td>BeyoncéVEVO</td>
+                        <td>UC9zX2xZIJ4cnwRsgBpHGvMg</td>
+                        <td> </td>
+                        <td align="right">9363430998.0</td>
+
+                        <td align="right">13617332</td>
+                        <td align="right">131</td>
+                        <td>https://yt3.ggpht.com/z1orAkxab2oq3dDqpH1KBWkGGAhcu2LgEfkYrujK346nsHBaAzacmII2-_qmjPd6kWN4YstNufk=w1060-fcrop64=1,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no</td>
+                        <td>Music</td>
+                        <td>US</td>
+                        <td>Sep 2nd, 2009</td>
+                        <td>$865 - $13.8K per day</td>
+                        <td align="right">865000.0</td>
+                        <td align="right">13800.0</td>
+                        <td align="right">439400.0</td>
+                    </tr>
+                    <tr>
+                        <td align="right">75</td>
+                        <td>Sony Music India</td>
+                        <td>UC56gTxNs4f9xZ7Pa2i5xNzg</td>
+                        <td>Sony Music India SME- Home To The Hits. Subscribe to our channel to listen to chart-busters in the making, see premieres of blockbuster videos and get your ...</td>
+                        <td align="right">9178008853.0</td>
+
+                        <td align="right">23467678</td>
+                        <td align="right">2401</td>
+                        <td>https://yt3.ggpht.com/vOxa1_BXlbrQ_23Idnymz7K6Bt9bCmrF_JiFJ7z0hHnc97kCgq9cnbRh6Ge_7WbjCBf7xW4Ek_w=w1060-fcrop64=1,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no</td>
+                        <td>Music</td>
+                        <td>IN</td>
+                        <td>Sep 2nd, 2009</td>
+                        <td>$2.6K - $42.2K per day</td>
+                        <td align="right">42200.0</td>
+                        <td align="right">2600.0</td>
+                        <td align="right">22400.0</td>
+                    </tr>
+                    <tr>
+                        <td align="right">76</td>
+                        <td>LEGO</td>
+                        <td>UCP-Ng5SXUEt0VE-TXqRdL6g</td>
+                        <td>Hello! Welcome to the home of the official LEGO® channel, thanks for dropping by! We hope to inspire and develop the builders of tomorrow, so come and join ...</td>
+                        <td align="right">8928655555.0</td>
+
+                        <td align="right">7221518</td>
+                        <td align="right">20190</td>
+                        <td>https://yt3.ggpht.com/vjJsUyDOeq6cUXzCPc3-4rVfzm5J54BaBSvRwf1olHei6naeGFA9esjxvwBOqRvUhJmoDgdDWw=w1060-fcrop64=1,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no</td>
+                        <td>Entertainment</td>
+                        <td>FR</td>
+                        <td>Oct 22nd, 2005</td>
+                        <td>$1.1K - $16.9K per day</td>
+                        <td align="right">16900.0</td>
+                        <td align="right">1100.0</td>
+                        <td align="right">9000.0</td>
+                    </tr>
+                    <tr>
+                        <td align="right">77</td>
+                        <td>JuegaGerman</td>
+                        <td>UCYiGq8XF7YQD00x7wAd62Zg</td>
+                        <td>Los Hombres De Verdad Gritan Como Niña.</td>
+                        <td align="right">8826923994.0</td>
+
+                        <td align="right">33589956</td>
+                        <td align="right">1571</td>
+                        <td>http://s.ytimg.com/yts/img/channels/c4/default_banner-vfl7DRgTn.png</td>
+                        <td>Games</td>
+                        <td>CL</td>
+                        <td>May 19th, 2013</td>
+                        <td>$1.4K - $22.9K per day</td>
+                        <td align="right">22900.0</td>
+                        <td align="right">1400.0</td>
+                        <td align="right">12150.0</td>
+                    </tr>
+                    <tr>
+                        <td align="right">78</td>
+                        <td>Trap Nation</td>
+                        <td>UCa10nxShhzNrCE1o2ZOPztg</td>
+                        <td>Welcome to Trap Nation, YouTube&#39;s number one channel for a unique and diverse taste of trap music! If you like what you hear, support the producers and show ...</td>
+                        <td align="right">8793730997.0</td>
+
+                        <td align="right">25260004</td>
+                        <td align="right">1595</td>
+                        <td>https://yt3.ggpht.com/EWBwje4gzYRMOfRRVakbLUrHGI1Eg1tCRiqvvmcD7pkvuXtyL5Cif4Iki4nsrUB5s48WDutDOA=w1060-fcrop64=1,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no</td>
+                        <td>Music</td>
+                        <td>US</td>
+                        <td>Sep 23rd, 2012</td>
+                        <td>$1.4K - $23K per day</td>
+                        <td align="right">23000.0</td>
+                        <td align="right">1400.0</td>
+                        <td align="right">12200.0</td>
+                    </tr>
+                    <tr>
+                        <td align="right">79</td>
+                        <td>Blu Toys Club Surprise</td>
+                        <td>UC7nGdI1YVbdj0lBqEeg8KxQ</td>
+                        <td>Welcome to BTCS Blu Toys Club Surprise, with kid-friendly videos for toddlers, babies, infants and preschool children. I review toys &amp; playsets from DisneyToys ...</td>
+                        <td align="right">8763632447.0</td>
+
+                        <td align="right">7190202</td>
+                        <td align="right">2359</td>
+                        <td>https://yt3.ggpht.com/_cyC8lnvEf0GI9tmKLULKxLPMywBMwoKRVghUv-SZh5kf7sKnHjtXmaM9EUFDLRPqe60teLirw=w1060-fcrop64=1,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no</td>
+                        <td>Entertainment</td>
+                        <td>US</td>
+                        <td>Dec 23rd, 2010</td>
+                        <td>$255 - $4.1K per day</td>
+                        <td align="right">255000.0</td>
+                        <td align="right">4100.0</td>
+                        <td align="right">129550.0</td>
+                    </tr>
+                    <tr>
+                        <td align="right">80</td>
+                        <td>IGN</td>
+                        <td>UCKy1dAqELo0zrOtPkf0eTMw</td>
+                        <td>The latest game reviews, trailers, and walkthroughs from the #1 games media company. As the leading source for gaming news on the net, IGN.com brings you ...</td>
+                        <td align="right">8704766636.0</td>
+
+                        <td align="right">11686762</td>
+                        <td align="right">131665</td>
+                        <td>https://yt3.ggpht.com/kcFKzysOtxxkXrCMq3DB3GeJ_k1r2jf2Yljcs_FV7LhFi7-RUVLPAW37AZfoFRfZsIAvth7Nhg=w1060-fcrop64=1,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no</td>
+                        <td>Games</td>
+                        <td>US</td>
+                        <td>Sep 19th, 2006</td>
+                        <td>$1K - $16.7K per day</td>
+                        <td align="right">16700.0</td>
+                        <td align="right">1000.0</td>
+                        <td align="right">8850.0</td>
+                    </tr>
+                    <tr>
+                        <td align="right">81</td>
+                        <td>OneDirectionVEVO</td>
+                        <td>UCbW18JZRgko_mOGm5er8Yzg</td>
+                        <td>One Direction on Vevo - Official Music Videos, Live Performances, Interviews and more...</td>
+                        <td align="right">8595723447.0</td>
+
+                        <td align="right">23201111</td>
+                        <td align="right">171</td>
+                        <td>https://yt3.ggpht.com/T_y8xME1D6mlO5g0xXe_dqSs9sPlWyraDKdrxlfUO1AHlmWkIQhxpoLNt6yF_SnUukezSNLL=w1060-fcrop64=1,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no</td>
+                        <td>Music</td>
+                        <td>GB</td>
+                        <td>Dec 4th, 2010</td>
+                        <td>$466 - $7.5K per day</td>
+                        <td align="right">466000.0</td>
+                        <td align="right">7500.0</td>
+                        <td align="right">236750.0</td>
+                    </tr>
+                    <tr>
+                        <td align="right">82</td>
+                        <td>Wave Music</td>
+                        <td>UCbuK8xxu2P_sqoMnDsoBrrg</td>
+                        <td>Welcome to Paradise   Your Home For The Best Electronic Music With Lyrics! All videos will be a lyric video with closed captions (CC) and have lyrics in the ...</td>
+                        <td align="right">564853775.0</td>
+
+                        <td align="right">2356185</td>
+                        <td align="right">1083</td>
+                        <td>https://yt3.ggpht.com/oeQMXdnYt3lMw0LOOLrxk8jpbauHEKkTkB4UEL3flGjxEtvMGzQErnPWPqYb-eAnPSxpBpnOWWk=w1060-fcrop64=1,00005a57ffffa5a8-nd-c0xffffffff-rj-k-no</td>
+                        <td>Entertainment</td>
+                        <td>US</td>
+                        <td>Dec 20th, 2011</td>
+                        <td>$318 - $5.1K per day</td>
+                        <td align="right">318000.0</td>
+                        <td align="right">5100.0</td>
+                        <td align="right">161550.0</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <footer class="footer navbar-fixed-bottom">
+        <div class="two-toned-footer-color"></div>
+        <p class="text-muted">
+            <div class="text-muted-footer text-center">
+                <!-- <a href="/" id="footer-text">About us</a>
+                <a id="divider"> | </a> -->
+                <a href="/" id="footer-text">Summary</a>
+                <a id="divider"> | </a>
+                <a href="/money" id="footer-text">Money Guide</a>
+                <a id="divider"> | </a>
+                <a href="/visualization_1" id="footer-text">Layered Map</a>
+                <a id="divider"> | </a>
+                <a href="/visualization_2" id="footer-text">Scatter Plot</a>
+                <a id="divider"> | </a>
+                <a href="/visualization_3" id="footer-text">Bubble Chart</a>
+                <a id="divider"> | </a>
+                <a href="/dataset" id="footer-text">Data</a>
+
+        </p>
+    </footer>
+    <!-- End of footer -->
+    <!-- Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+      </html>

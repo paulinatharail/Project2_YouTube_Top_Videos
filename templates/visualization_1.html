@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <!-- Boostrap Stylesheet -->
+    <link rel="stylesheet" href="../static/css/bootstrap.min.css" media="screen">
+
+
+    <link rel="stylesheet" type="text/css" media="screen" href="../static/css/style.css">
+    <script src="../static/js/app.js"></script>
+
+
+    <title>Where are the Top Earners?</title>
+</head>
+<body>
+    <!-- Start of navbar -->
+    <nav class="navbar navbar-default">
+        <div class="container-fluid navbar-custom">
+
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="row">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle Navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <div class="col-xs-9 phone-nav">
+                        <!-- <a class="navbar-brand" href="index.html"> -->
+                        <!-- <span><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASgAAACrCAMAAADiivHpAAAAdVBMVEX////u7u4AAADt7e339/fx8fH09PT5+fn7+/vm5ubExMROTk68vLxVVVXb29vX19d8fHxISEh0dHTNzc0sLCxpaWl3d3ewsLAxMTHh4eFMTEyvr6/Z2dkpKSkkJCShoaELCwsVFRWRkZE7OzuIiIhaWlpERETHhJ9QAAALa0lEQVR4nO1d63rjKAw1sQGnl7TTbu8z091tZ9//ETcB7EggzMVO7CTwZ0af3WP5BAsdjHBVqSbZrtXaaGtltNrSRqMNdRoT2uDK4NoQ+pA2GgTHXDgJDQqOQzgB4WZytSpEFaIKUadCFHlnl0JUHXd1fGc1vHoNrx6Co4hiO6vmEJtB7I6oSFdZwNU6zdVKqtYI1ZDRaCvSoBAOCZeG3Yx2lSC+hsTXVB+RkPiW6CPeH7WmftRgHyEfVBcu6CoF17lah7BjH+UAUQxenYXDRApRGHseVwtRhahC1ExE1ar1I/Su9SP0rvVXV627OjAMQguNBsIJCNdf3QfXEnASGn44ytUgHHKVunPkaiX5rjFDPFOGhIbB06cJYPDOV2g0+jyDzXzYlYvNRRDO6yoBF+1qG3K1Iyori/P3fhaAIxNOZYQz84lcTU04zdVDd1a03mkTVTWqGUNAAx25cFG8/nx6v1btVjVkXHfGwye3tN4YolIe/L5HTSSKETYFRyUTW7jvVWz7lNtRbZyrVauajv1cG3pc4VJb2migIbQhXINHwlHYBJzww7XVUzRPq9V9m+2q8W4gj3KTE4YTny6LCyQn3sSHjcmjxGcCT6vVow/O76qVR+GHyR91Jk53IXZWZi5+JRH1nu/qiUuYTRJPqxW/VKKuEolaXypRN8cmKiWYR6vYI4jiHKJGBXMzSKrp4W6Q1IYZJM3MsdcQhOGHM0aXbWTAmenv1EdvY8NFutp5V8X1fn9mXgcf1HxRXPsTTp5K1B2nJ+zPXRTnEHWRovgkiFqCKMZEPb1tdu1RtbuNNu6+DkFUaIRO7FFeOOItYD8lCbEFxCZyE0zUvUEwKlAb8j2KqJwY1c+BAsNwk/PoMT+2JLD9RAkXjiQKuyp/wFN+DvYoY6A7x66Oz6NmermA8qgHQbl6DU+JyqOGXi4k9ZEDiWKIbeDSMvOHhnLVIWqUq7FELVrCPAjK1YmIOietV4haEFGBYM5ghIyekjzCDKcbzB1X04P50LjTnGZrUXrwTN1GhfKoNznuglX4R2WAeG30PdQhPuL1P4M/KoRjEM7/+l+7SuZRyFXWoDzqjtO5SayrHVFsOEwsXOvdQzgfUUUUL5ao5Yni5RCVpfWoqzsjNBcGzcRjc9UWhVAheDRRbFqinGU/cQM+GqH96i16LRdrrr4fnh5Ue9KNMh6+rxoWEcyRqxZRbJyr+XnUvo94aQ3nURzdzFD7jw/mUYxwFaUH6aLYojXnYZLuw0TOMIWwOYuladc4mofJF8VZrs4rYeTXKqF9NX6izlvr8cR3czf8QokSz2lEPYs5iXKDOYsN5pUhKiGYI+zmTxpRf5qdqPCIYja1KGZWMCfqiWJrmmRSvZSLje8k3K7bPRwm6rklvLNEcTvG1T7Zi86jmE38mOTkNo2oW+BqOI+aQBTD/tcRxUAIOprWyyNKX3WhEqYQlUPUZKL43Im66B4VG8ydUXSyYP5ydXWzbVd6AYExXgiiIoP51KK4WzkODYNnipDUoX45tvIVGv3KcWA0IThlSJQe3BmH0Gh8B8+4lsBVS+sRrrqiGLlaRbpq4LKiTl7xtYPdIKIeKwhnftRHRFQD4AYy887VGFEcH3xjo84BJEwWUZeo9QpRF0BUTZwRRdRAvZQXe0qi6hiigqVdQzSgEqJuCIwrQmrhH2XUYrUWUW6Bk0UUKJGyiJKEq5iotyrT1W7U6/rI7HnUG4Izxhs8Y1wedTai+I14r0cSpY9croQpRF0uUZPte3BYouRhRHEcUTUiamdFRsgYoiCcMchgntejoCjenda7GvWbVv2cOaxpwoYEFUmEIfVfGzhUitRCy/wVQMDpwV3bwe1Pa7EobveueubMoXfOnHlfLwXvL/bOs+qlcMLJ+cv38/O9bs+q6f9/Q+P++6MWuMDpUKI4kJlHiuLJdySr0JzRYPtszkbCZBCVUlZ/31wuUT8TeFqtbgS4+tkQFSWK0972fi2AqNTVLIk9ChqgXkok8bTTpnvsAaJYIlHush82dS1M10fyRDFD43dEe2RzieKxLxdgH0mXMDyVqCsOev+5S5hCVCFqWqLq0yBqUaJ4UqIcUUwTlSuKR24QMa7mSKI7iSGqBQVLiKg7ovxJot/hFjh7/Ooq+2Fiadt0r6EzX1c3Hy/b9nGj24tqiI4bgH10URx6C3PIbboRUdfW1gP6XQta0jqaqCVKmByi3KuLh0JUIaoQ5RKF1Fv6Nt0OUY4y9BC1O4smCsotTJQArh59Jw1z6wx0GJx2sSHicR71o6GyuHt4is6jmD/h7OZhtJGWcGJXRyecDPY/kqjczDyaqFGZeWbCaRNVE64ebkeyOYjy96ilab1C1Gk8evMSFSmKMVG2KN4TBeGiiaohUZOLYu4M+K6rwW26+4okZUjCUOutJNyHUx1p0Ja9761w4SokYa6aPQIm6ifcHrO7KnrHc1vJHruxRLG0XZWiRUTt9+GU6EJxd7511u4jY0Txtf2j7ix/wilSE87dX/lFseNqkiiuHRrQJqAlMy8SphBViFo2UYcUxWxiUdwcWhSj5c6WKMZrs92l3sPLsQVKD360xKp0K48Se2ycHmyor3gg+Ntq752w8ijCVTs9GPfBkQo9TFTvz8rMsxJOdeSAorgmRXFswmmIYglEFa1XiJqWqCKKp+tR2TGqn+FcnCjWJ/QfhNoZXbiHhrp6C0tvlWGNelK7si9wcokSe2x61DM3Q496vavOqOe6ike9n32JVAu/2Ihc9dNQVQN5VNQ23WPyKI8oXujLBfthYhGP8gSZuTrrNDJzQ0MsURcvYQpRhaijbtNdRHEXzP17jMVsOGbNmVfElmXWnLncI9Bz5hBB2nPm+yP2nLnrHV5ItmlE9O5q1J1XTh9RPRT8qIPbdHsTTgBnJ5z7H3Vonbnesztxnflyt+m+PAlTiDoAURctigNEncayH+xqDlHEncfvSIYipLW9pE0UFSEtosAIjYkSrtyaMphnFA2hYF7DBOK4K+4uQBTvH+UDieLx9XpFFBetV4g6D6L8wTxqm+4FieIDb9M9ruaoReP3O1nkhEUxrK6ythwh4CesriLgU1oF+kjyt6vs4utxedQExdcTi2LY/zqiGAhBRetBuELU4Ykqovhoojj8ptgYxxbFYaJCIS1qJ43rqp8xVbOsBFGPLTiC9nVZqyOyhQgtyj7+wCMocTBENQB76woeVMfupGH3EWYRzyHx7t4s6E7+fv3Lba//wFN+wyN/wyO/0B+Zf3954X/DI/+4F3614Nd9h8n87LYdddwzAFGBzHzJLWZHsqOJ4iW3RWm9JbdCVGSbhihUBJK0I9lJERWqhRncphuVEAlQd4QN/UK1X2XcFSFVqVuOzNbekN9qdXTKnRsK8/OoTdjFZbTNvDuSMf477OMS2m/uC77ozpl75xMRJf6dm4K49q+YmSjGX+fmIKa9cu9wfjSi1klfPJ2nfa0nIyozmCvjY+Gd6vWjQm+hx3y7qhskQ9+yIIqQ5PaP683mba3aRjXKeNNWyFgTxgjs7Xn11kWqXirtzifYpntn8O7VLtuBdrmvukIvycEy+G2HV4e6Dg8Mg0DBaaMB2PZXubR3CHv7vxq5mvztqmkkzEhdAOEqeDPUgpJ6VlfnJArDFaLOnqgYUUw++PTVXaUZSVQdJirOVQou0lWGgyKOkMwXfSUMuK0bcHkw4FLYCA4aHRybxlU+wtWZvl0Vu4oNYc/kakcUC/T+6KllfXUEx4Z7PzkocwiHqqVncrUQVYian6jJvnx9ikSFRugGGnAUtfce1ldPGfD3wRzAEVs4xSYTns3TbFf7YB7nav/tKreeyF+E1AxWXOXCHRJ7PNzYbboTlSb5oyYlnIPfl5rKVepRiX2Ui4QpRBWiClGFqOUS9T9EiLitMOpMmgAAAABJRU5ErkJggg==" class="img-fluid" style="width:50px;height:60px;"> Youtube Statistics
+                        </span>
+                        </a> -->
+                        <a class="navbar-brand" href="/" id="logo">YouTube Stats</a>
+                    </div>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right navbar-right-custom">
+                        <li><a href="/challenges">Challenges</a></li>
+                        <li><a href="/dataset">Data</a></li>
+                        <li><a href="/money">Money Guide</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Visualizations <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="/visualization_1">Where are the top earners?</a></li>
+                                <li><a href="/visualization_2">Who is making the most?</a></li>
+                                <li><a href="/visualization_3">Video uploads vs Views</a></li>
+                            </ul>
+                        </li>
+                        <!--<li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Our Conclusions<span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="money.html">How do you make money with Youtube?</a></li>
+                                <li><a href="Who.html"> Who is making the most with Youtube?</a></li>
+                                <li><a href="Subscribers.html"> What would it take to get into the top 100 Youtube Channels and make money?</a></li>-->
+                        <!-- <li><a href="conclusion.html">Our Conclusions</a></li> -->
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div>
+        </div><!-- /.container-fluid -->
+    </nav>
+    <!-- End of navbar -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="text-center" id="title"> Where are the top Earners of Youtube?</h1>
+            </div>
+        </div>
+    </div>
+    <div class='tableauPlaceholder' id='viz1551325923002' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;WS&#47;WSQCSGYQ4&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz' style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='shared&#47;WSQCSGYQ4' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;WS&#47;WSQCSGYQ4&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='publish=yes' /></object></div>
+    <script type='text/javascript'>var divElement = document.getElementById('viz1551325923002'); var vizElement = divElement.getElementsByTagName('object')[0]; vizElement.style.width = '1366px'; vizElement.style.height = '795px'; var scriptElement = document.createElement('script'); scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js'; vizElement.parentNode.insertBefore(scriptElement, vizElement);</script>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12" id="challenge-text">
+                <br>
+                <p> From this graph, you can see the data for the top earners of each country. Each country is also colored for the average amount of money earned from its top youtube channels. <br /> An interesting point to note is that channels from India have a large number of viewers and subscribers, however, on average, they make less money than the channels that originate from Canada or the USA.</p>
+            </div>
+        </div>
+    </div>
+    <!-- Start of footer -->
+    <footer class="footer navbar-fixed-bottom">
+        <div class="two-toned-footer-color"></div>
+        <p class="text-muted">
+            <div class="text-muted-footer text-center">
+                <!-- <a href="index.html" id="footer-text">About us</a>
+                <a id="divider"> | </a> -->
+                <a href="/" id="footer-text">Summary</a>
+                <a id="divider"> | </a>
+                <a href="/money" id="footer-text">Money Guide</a>
+                <a id="divider"> | </a>
+                <a href="/visualization_1" id="footer-text">Layered Map</a>
+                <a id="divider"> | </a>
+                <a href="/visualization_2" id="footer-text">Scatter Plot</a>
+                <a id="divider"> | </a>
+                <a href="/visualization_3" id="footer-text">Bubble Chart</a>
+                <a id="divider"> | </a>
+                <a href="/dataset" id="footer-text">Data</a>
+
+        </p>
+    </footer>
+    <!-- End of footer -->
+    <!-- Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
