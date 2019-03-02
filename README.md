@@ -1,7 +1,8 @@
 
 App Description: <hr>
+Visit our site https://project2-youtube.herokuapp.com/visualization_3: Heroku App
 
-We used the Kaggle YouTube datasets to identify the top 100 YouTube channels and then used the YouTube API to retrieve the information for these channels. The retrieved information was loaded to a SQLite database and a CSV file. The database is used by the Flask app to render the HTML pages and the CSV file is used by Tableau to generate the visualizations.
+Our project was to discover what a top YouTube channel looks like. In order to do this, we found a top 100 list of youtube channels on Kaggle that was organized by . Through that, we took their top 100 list and then scraped socialblade for their current data. We also used the YouTube API to retrieve the information for these channels. The retrieved information was loaded to a SQLite database and a CSV file. The database is used by the Flask app to render the HTML pages and the CSV file is used by Tableau to generate the visualizations.
 
 
 
@@ -22,7 +23,7 @@ db:
 
 static: 
 -------
-    contains the css and js components<br>
+    contains the css and js components
 
     a) css folder:
         1) bootstrap.min.css: Bootstrap css
