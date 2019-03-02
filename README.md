@@ -16,7 +16,7 @@ We used the Kaggle YouTube datasets to identify the top 100 YouTube channels and
  * `kaggle_data.csv:` Used this dataset to shortlist the top 100 youtube channels based on their rank.
 
 
-### db:###
+### db: ###
  * `YouTube_Top_Channels.sqlite:` database containing the top 83 youtube channels retrieved with the YouTube API.
 
 ### static: ###
@@ -47,10 +47,10 @@ contains the `HTML` pages:
 `app.py:` This is the app that hands off the data from our CSV and JSON to the website. 
 
 
-### Tableau visualizations:###
+### Tableau visualizations: ###
 ------------------------
 `youtube_book.twb:` This is our Tableau notebook. 
 
-### Jupyter Notebooks:###
+### Jupyter Notebooks: ###
 ---------------------
    * `YouTube_Data_Integration.ipynb`
