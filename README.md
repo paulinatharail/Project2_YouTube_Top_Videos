@@ -14,13 +14,12 @@ We used the Kaggle YouTube datasets to identify the top 100 YouTube channels and
 ### data: ###
  * `Top83_YouTube_Channels.csv:` Channel information extracted using YouTube Data API.
  * `kaggle_data.csv:` Used this dataset to shortlist the top 100 youtube channels based on their rank.
-
+-------
 
 ### db: ###
  * `YouTube_Top_Channels.sqlite:` database containing the top 83 youtube channels retrieved with the YouTube API.
-
-### static: ###
 -------
+### static: ###
 contains the css and js components:
 
  css folder:
@@ -29,10 +28,9 @@ contains the css and js components:
 
  js folder: 
   * `logic.js:` javascript to add interactivity to pages.
-
-
+-------
 ### templates: ###
-----------
+
 contains the `HTML` pages:
    * `challenges.html`
    * `data.html`
@@ -41,16 +39,15 @@ contains the `HTML` pages:
    * `visualization_1.html`
    * `visualization_2.html`
    * `visualization_3.html`
-
+-------
 ### Flask app: ###
------------
-   * `app.py:` This is the app that hands off the data from our CSV and JSON to the website. 
 
+   * `app.py:` This is the app that hands off the data from our CSV and JSON to the website. 
+-------
 
 ### Tableau visualizations: ###
-------------------------
    * `youtube_book.twb:` This is our Tableau notebook. 
-
+-------
 ### Jupyter Notebooks: ###
----------------------
    * `YouTube_Data_Integration.ipynb`
+-------
