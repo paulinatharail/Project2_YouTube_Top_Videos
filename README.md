@@ -44,12 +44,12 @@ contains the `HTML` pages:
 
 ### Flask app: ###
 -----------
-`app.py:` This is the app that hands off the data from our CSV and JSON to the website. 
+   * `app.py:` This is the app that hands off the data from our CSV and JSON to the website. 
 
 
 ### Tableau visualizations: ###
 ------------------------
-`youtube_book.twb:` This is our Tableau notebook. 
+   * `youtube_book.twb:` This is our Tableau notebook. 
 
 ### Jupyter Notebooks: ###
 ---------------------
